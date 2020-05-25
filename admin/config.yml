@@ -89,6 +89,13 @@ collections:
       - {label: title, name: title, required: false, widget: string}
       - {label: Film URL, name: film-url,required: false,widget: string,hint: "put the google drive share URL(https://www.wonderplugin.com/online-tools/google-drive-direct-link-generator/), make sure it s not above 100mb. otherwise video won't show."}
       - { label: Text, name: text, widget: 'markdown', hint: 'about this film/credits', buttons: ['link']}
+      - label: Image Placeholder
+        name: image
+        required: false
+        widget: image
+        media_library:
+          config:
+            multiple: true
       - label: Volume
         name: volume
         required: false

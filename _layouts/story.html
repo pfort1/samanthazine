@@ -13,23 +13,29 @@ layout: default
       <div class="sans-serif">{{page.category}}</div>
     </div>
   </div>
+
   <div class="content story">
     {{page.text | markdownify}}
   </div>
+
+  {% if page.category == "Art" %}
+
   <div class="content art">
     <p class="parapgraph">&quot; Quote &quot;</p>
   </div>
+
+  {% endif %}
+
   <div class="images-content">
     <div class="parapgraph">Images:</div>
     <div class="image-collection">
+      {% for image in page.images %}
       <div class="item image">
-        <div class="item-lightbox story-image"></div>
-        <div class="sub-link">Image 01</div>
+        <div class="item-lightbox story-image"> <img src="{{ image }}" alt="{{ image }}"> </div>
+        <div class="sub-link">image{{ forloop.index }}</div>
       </div>
-      <div class="item image">
-        <div class="item-lightbox story-image"></div>
-        <div class="sub-link">Image 02</div>
-      </div>
+      {% endfor %}
     </div>
   </div>
+
 </div>

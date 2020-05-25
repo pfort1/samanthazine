@@ -14,12 +14,19 @@ layout: default
     <div class="item-collection">
       {% for volume in site.volume %}
       <div class="item">
-        <div class="item-lightbox"></div><a href="{{ volume.url }}" class="item-link">{{ volume.title }}</a>
+        <div class="item-lightbox">
+          <img src="{{volume.image}}" alt="">
+        </div>
+        <a href="{{ volume.url }}" class="item-link">{{ volume.title }}</a>
       </div>
       {% endfor %}
+
       {% for nav in site.data.navigation %}
       <div class="item">
-        <div class="item-lightbox"></div><a href="{{ nav.text }}" class="item-link">{{ nav.text }}</a>
+        <div class="item-lightbox">
+          <img src="{{nav.image}}" alt="">
+        </div>
+        <a href="{{ nav.text }}" class="item-link">{{ nav.text }}</a>
       </div>
       {% endfor %}
     </div>

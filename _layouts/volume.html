@@ -16,7 +16,10 @@ layout: default
       {% for story in site.story %}
       {% if story.volume == volume %}
       <div class="item">
-        <div class="item-lightbox"></div><a href="{{ story.url }}" class="item-link">{{ story.title }}</a>
+        <div class="item-lightbox">
+          <img src="{{ story.images[0] }}" alt="">
+        </div>
+        <a href="{{ story.url }}" class="item-link">{{ story.title }}</a>
       </div>
       {% endif %}
       {% endfor %}
