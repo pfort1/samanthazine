@@ -24,11 +24,11 @@ collections:
             name: layout
             widget: hidden
             default: info-layout
-            required: true
+            required: false
             hint: ""
           - label: Text
             name: text
-            required: true
+            required: false
             widget: markdown
             hint: ""
             default: ""
@@ -42,25 +42,25 @@ collections:
             default: ""
           - label: Over
             name: over
-            required: true
+            required: false
             widget: string
             hint: ""
             default: ""
           - label: Info Image
             name: info-image
-            required: true
+            required: false
             widget: string
             hint: ""
             default: ""
           - label: Shop Image
             name: shop-image
-            required: true
+            required: false
             widget: string
             hint: ""
             default: ""
           - label: Film Image
             name: Film Image
-            required: true
+            required: false
             widget: string
             hint: ""
             default: ""
@@ -72,19 +72,19 @@ collections:
     fields:
       - label: Layout
         name: layout
-        required: true
+        required: false
         widget: hidden
         hint: ""
         default: volume-layout
       - label: title
         name: title
-        required: true
+        required: false
         widget: string
         hint: vol. I
         default: ""
       - label: image
         name: image
-        required: true
+        required: false
         widget: image
         hint: ""
         default: ""
@@ -98,13 +98,13 @@ collections:
     fields:
       - label: Layout
         name: layout
-        required: true
+        required: false
         widget: hidden
         hint: ""
         default: story-layout
       - label: Name
         name: name
-        required: true
+        required: false
         widget: string
         hint: ""
         default: ""
@@ -116,7 +116,7 @@ collections:
         default: ""
       - label: Images
         name: images
-        required: true
+        required: false
         widget: list
         hint: ""
         default: ""
@@ -124,7 +124,7 @@ collections:
         field:
           label: Images
           name: image
-          required: true
+          required: false
           widget: image
           hint: ""
           default: ""
@@ -132,7 +132,7 @@ collections:
         fields: ""
       - label: Volume Relation
         name: Volume
-        required: true
+        required: false
         widget: relation
         hint: ""
         default: ""
@@ -165,19 +165,19 @@ collections:
     fields:
       - label: Layout
         name: layout
-        required: true
+        required: false
         widget: hidden
         hint: ""
         default: film-item-layout
       - label: Title
         name: title
-        required: true
+        required: false
         widget: string
         hint: ""
         default: ""
       - label: Film URL
         name: film-url
-        required: true
+        required: false
         widget: string
         hint: put the google drive share
           URL(https://www.wonderplugin.com/online-tools/google-drive-direct-link-generator/),
@@ -193,7 +193,7 @@ collections:
           - link
       - label: Volume
         name: volume
-        required: true
+        required: false
         widget: relation
         hint: ""
         default: ""
@@ -212,19 +212,19 @@ collections:
     fields:
       - label: Layout
         name: layout
-        required: true
+        required: false
         widget: hidden
         hint: ""
         default: shop-item-layout
       - label: Title
         name: title
-        required: true
+        required: false
         widget: string
         hint: ""
         default: ""
       - label: Description
         name: description
-        required: true
+        required: false
         widget: markdown
         hint: ""
         default: ""
@@ -232,7 +232,7 @@ collections:
           - link
       - label: Price
         name: price
-        required: true
+        required: false
         widget: number
         hint: ""
         default: "0"
@@ -242,7 +242,7 @@ collections:
         step: 1
       - label: Image
         name: image
-        required: true
+        required: false
         widget: image
         hint: main image
         default: ""
@@ -255,7 +255,7 @@ collections:
         default: false
       - label: More Images
         name: images
-        required: true
+        required: false
         widget: list
         hint: ""
         default: ""
@@ -271,7 +271,7 @@ collections:
         fields: ""
       - label: Max Quantity
         name: max-quantity
-        required: true
+        required: false
         widget: number
         hint: max quantity per customer
         default: "1"
