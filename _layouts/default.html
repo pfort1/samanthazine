@@ -5,20 +5,19 @@ layout: compress
 <!DOCTYPE html>
 <html data-current="{{ page.section }}" lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include age-gate.html %}
+  <div class="intro-logo"></div>
 
-    <main>
+  {{ content }}
 
-      {{ content }}
+  <div class="overlay"></div>
 
-    </main>
+  {% include footer.html %}
 
-    {% include footer.html %}
-
-  </body>
+</body>
 
 </html>

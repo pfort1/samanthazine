@@ -1,5 +1,5 @@
 ---
-layout: shop-item-layout
+layout: shop/shop-item
 title: Item Name
 description: some description about it
 price: 15

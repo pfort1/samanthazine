@@ -2,22 +2,26 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-
-  {% include page-intro.html %}
-
-  {{ content }}
-
-  <section>
-
-    <h3>Recent posts from the blog</h3>
-
-    <ul>
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
+<div class="container">
+  <div class="navigator-container">
+    <div class="navigator"><a href="#" class="sans-serif">{{ page.title }}</a></div>
+    <div class="navigator bottom"><a href="https://www.instagram.com/samantha_zine" target="_blank" class="sans-serif">INSTAGRAM</a>
+      <div class="sans-serif">/</div><a href="mailto:TALKTOME@SAMANTHAZINE.COM?subject=Talk%20To%20Me%2C%20Samantha" class="sans-serif">CONTACT ME</a>
+      <div class="sans-serif">/</div><a href="#" class="sans-serif">DONATE</a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="item-collection">
+      {% for volume in site.volume %}
+      <div class="item">
+        <div class="item-lightbox"></div><a href="{{ volume.url }}" class="item-link">{{ volume.title }}</a>
+      </div>
       {% endfor %}
-    </ul>
-
-  </section>
+      {% for nav in site.data.navigation %}
+      <div class="item">
+        <div class="item-lightbox"></div><a href="{{ nav.text }}" class="item-link">{{ nav.text }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

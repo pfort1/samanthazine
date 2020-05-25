@@ -2,17 +2,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.section == "home" %}
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
   {% else %}
-    <title>{{ page.title }}</title>
-    {% if page.meta_description %}
-      <meta name="description" content="{{ page.meta_description }}">
-    {% endif %}
+  <title>{{ page.title }}</title>
+  {% if page.meta_description %}
+  <meta name="description" content="{{ page.meta_description }}">
   {% endif %}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {% endif %}
+  <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
   {% if jekyll.environment == 'production' and site.analytics %}
-    {% include analytics.html %}
+  {% include analytics.html %}
   {% endif %}
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link href="/assets/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/samanthatest02.webflow.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>

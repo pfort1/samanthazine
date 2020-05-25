@@ -27,6 +27,16 @@ permalink: /blog/:title
 # (used as a hook for styling etc)
 section: true
 
+collections:
+  story:
+    output: true
+  volume:
+    output: true
+  film:
+    output: true
+  shop:
+    output: true
+
 # set to 'true' to enable Netlify CMS (/admin) in production builds
 netlifycms: true
 

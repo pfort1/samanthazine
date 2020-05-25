@@ -1,10 +1,11 @@
 # specify main menu items here
 
-- text: Home
-  url: /
-- text: About
-  url: /about
-- text: Contact
-  url: /contact
-- text: Blog
-  url: /blog
+- text: Films
+  url: /films
+  image: /assets/img/uploads/rectangle-copy-2.png
+- text: Shop
+  url: /shop
+  image: /assets/img/uploads/6-1.jpg
+- text: Info
+  url: /info
+  image: /assets/img/uploads/s_0965_edit.jpg

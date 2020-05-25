@@ -1,12 +1,13 @@
 ---
-layout: story-layout
+layout: story
 title: Für Elise
-category: Fashion (only text - credits)
+category: Fashion
 text: >-
   Model: [Elki](<https://www.instagram.com/maturemodel1/>)
 
 
   Photography: [Oh E](<https://www.instagram.com/ohhhheeeee/>)
+
 
 
   Cinematography: [Ameer Kazmi](<https://www.instagram.com/arizonasandhoneybuns/>)
@@ -15,7 +16,9 @@ text: >-
   Style: [Samantha-Sungeun Kim](<https://www.instagram.com/stylesamantha7/>)
 
 
+
   Make-Up: [Kohko Takako](<https://www.instagram.com/kohkomakeup/>)
+
 
 
   Hair [Yukie Nammori](<https://www.instagram.com/yukienammori/>)

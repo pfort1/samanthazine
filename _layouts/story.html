@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="container story">
+  <div class="navigator-container">
+    <div class="navigator"><a href="/" class="sans-serif">{{site.title}}</a></div>
+    <div class="navigator l-2">
+      <a href="/volume/{{page.volume | slugify}}" class="back-button w-inline-block"></a>
+      <a href="/volume/{{page.volume | slugify}}" class="sans-serif">VOL. II</a></div>
+    <div class="navigator l-2 l-3">
+      <div class="sans-serif">{{page.title}}</div>
+      <div class="sans-serif">{{page.category}}</div>
+    </div>
+  </div>
+  <div class="content story">
+    {{page.text | markdownify}}
+  </div>
+  <div class="content art">
+    <p class="parapgraph">&quot; Quote &quot;</p>
+  </div>
+  <div class="images-content">
+    <div class="parapgraph">Images:</div>
+    <div class="image-collection">
+      <div class="item image">
+        <div class="item-lightbox story-image"></div>
+        <div class="sub-link">Image 01</div>
+      </div>
+      <div class="item image">
+        <div class="item-lightbox story-image"></div>
+        <div class="sub-link">Image 02</div>
+      </div>
+    </div>
+  </div>
+</div>
