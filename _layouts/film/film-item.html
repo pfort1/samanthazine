@@ -4,8 +4,10 @@ layout: default
 
 <div class="container wide">
   <div class="navigator-container">
-    <div class="navigator"><a href="index.html" class="sans-serif">SAMANTHA ZINE</a></div>
-    <div class="navigator l-2"><a href="index.html" class="back-button w-inline-block"></a><a href="films.html" class="sans-serif">FILMS</a></div>
+    {% include navigation.html %}
+    <div class="navigator l-2">
+      <a href="/films" class="back-button w-inline-block"></a>
+      <a href="/films" class="sans-serif">FILMS</a></div>
     <div class="navigator l-2 l-3">
       <div class="sans-serif">{{ page.title }}</div><a href="#" class="sans-serif video-info-button">MORE INFO</a>
     </div>
@@ -19,7 +21,7 @@ layout: default
       <p class="parapgraph">{{page.text}}</p>
     </div>
     <div class="video-embed w-embed">
-      <video controls="" controlslist="nodownload" mute="true" class="video" width="100%" height="100%" poster="{{ page.image }}">
+      <video controls autoplay muted controlslist="nodownload" class="video" width="100%" height="100%" poster="{{ page.image }}">
         <source src="{{page.film-url}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
