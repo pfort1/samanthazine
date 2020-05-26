@@ -1,5 +1,5 @@
 ---
 layout: volume
 title: Vol. I
-image: /assets/img/uploads/rectangle-copy-2.png
+image: /assets/img/uploads/il_fullxfull.1587719082_injh.jpg
 ---
