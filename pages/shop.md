@@ -1,6 +1,7 @@
 ---
 layout: shop/shop
-title: SHOP
+title: Shop
 permalink: /shop
 section: shop
+image: /assets/img/uploads/6-1.jpg
 ---

@@ -21,13 +21,15 @@ layout: default
       </div>
       {% endfor %}
 
-      {% for nav in site.data.navigation %}
+      {% for nav in site.pages %}
+      {% if nav.url != "/" and nav.url != "/404.html" %}
       <div class="item">
         <div class="item-lightbox">
           <img src="{{nav.image}}" alt="">
         </div>
-        <a href="{{ nav.text }}" class="item-link">{{ nav.text }}</a>
+        <a href="{{ nav.url }}" class="item-link">{{ nav.title }}</a>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   </div>

@@ -1,6 +1,6 @@
 ---
 layout: info
-title: INFO
+title: Info
 section: info
 permalink: /info
 text: Samantha​ is a New Age Erotica zine that explores ideas of sexuality and
@@ -9,4 +9,5 @@ text: Samantha​ is a New Age Erotica zine that explores ideas of sexuality and
   be. We are driven to revive the romance of erotica in our world overrun by
   commercialized desire. ​
 instagram: https://www.instagram.com/samantha_zine/
+image: /assets/img/uploads/s_0965_edit.jpg
 ---

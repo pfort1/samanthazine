@@ -18,22 +18,22 @@ collections:
         label: Info
         name: info
         fields:
-          - { label: layout, name: layout, widget: hidden, default: info-layout }
+          - { label: layout, name: layout, widget: hidden, default: info }
           - {label: Text, name: text, required: false, widget: markdown,hint: "", default: "", buttons: ['link']}
           - {label: instagram, name: instagram, required: false, widget: string, hint: "", default: ""}
-      - file: /data/navigation.yml
-        label: Navigation
-        name: navigation
+          - {label: image, name: image, required: false, widget: image}
+      - file: /pages/shop.md
+        label: Shop
+        name: shop
         fields:
-          - { label: text, name: text, widget: string }
-          - { label: url, name: url, widget: string }
-          - label: Image
-            name: image
-            required: false
-            widget: image
-            media_library:
-              config:
-                multiple: false
+          - { label: layout, name: layout, widget: hidden, default: shop/shop }
+          - {label: image, name: image, required: false, widget: image}
+      - file: /pages/film.md
+        label: Films
+        name: film
+        fields:
+          - { label: layout, name: layout, widget: hidden, default: film/film }
+          - {label: image, name: image, required: false, widget: image}
   - name: volume
     label: VOL.
     folder: _volume

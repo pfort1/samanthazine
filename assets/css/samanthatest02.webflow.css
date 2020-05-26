@@ -254,6 +254,7 @@ p {
 .item-lightbox img {
   min-height: 100vh;
   object-fit: cover;
+  filter: blur(5px);
 }
 
 .item-lightbox.story-image {

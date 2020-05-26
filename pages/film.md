@@ -1,6 +1,7 @@
 ---
 layout: film/film
-title: FILMS
+title: Films
 permalink: /films
 section: film
+image: /assets/img/uploads/rectangle-copy-2.png
 ---

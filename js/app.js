@@ -39,12 +39,17 @@ function autoCarousel() {
 }
 
 $('.item-link, .sub-link').not('.shop-link').on('mouseenter', function() {
+  var image = $(this).siblings('.item-lightbox').find('img')
+
+  $(image).css('filter', 'blur(0px)')
   $('.item-lightbox').hide(0)
   $(this).siblings('.item-lightbox').show(0)
+
   clearTimeout(timer)
 })
 $('.item-link, .sub-link').not('.shop-link').on('mouseleave', function() {
   $('.item-lightbox').hide(0)
+  $('.item-lightbox img').css('filter', 'blur(5px)')
   autoCarousel();
 })
 $('.item-link.shop-link').on('mouseenter', function() {
