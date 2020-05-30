@@ -1,0 +1,155 @@
+<style>
+
+  /* Created with http://boockup.marco.land */
+  @-webkit-keyframes rotatingAnimationX {
+    0%{
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  @keyframes rotatingAnimationX {
+    0%{
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  @-webkit-keyframes rotatingAnimationY {
+    0%{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @keyframes rotatingAnimationY {
+    0%{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @-webkit-keyframes rotatingAnimationZ {
+    0%{
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg);
+    }
+    100% {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg);
+    }
+  }
+  @keyframes rotatingAnimationZ {
+    0%{
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg);
+    }
+    100% {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg);
+    }
+  }
+
+  .container-book {
+    width: 50vw;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container-book > div {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .boockup {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
+  }
+  .book-container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: 7s rotatingAnimationY linear infinite;
+    animation: 7s rotatingAnimationY linear infinite;
+  }
+  .book-container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+  .book-top, .book-bottom, .book-side-right {
+    background-size: auto auto;
+    background-repeat: repeat;
+    background-position: top left;
+  }
+  .book-front {
+    background-image: url('{{volume.image}}');
+    width: 400px;
+    height: 520px;
+    -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(0,0,0) rotateY(0deg);
+    transform: translate3d(-200px ,-260px ,15px) translate3d(0,0,0) rotateY(0deg);
+  }
+  .book-side-left {
+    background-color: red;
+    width: 30px;
+    height: 520px;
+    -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(-15px, 0, -15px) rotateY(-90deg);
+    transform: translate3d(-200px ,-260px ,15px) translate3d(-15px, 0, -15px) rotateY(-90deg);
+  }
+  .book-side-right {
+    background-image: url('/assets/img/book/book-side.jpg');
+    width: 30px;
+    height: 520px;
+    -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(385px, 0px,-15px) rotateY(90deg);
+    transform: translate3d(-200px ,-260px ,15px) translate3d(385px, 0px,-15px) rotateY(90deg);
+  }
+  .book-top {
+    background-image: url('/assets/img/book/book-top.jpg');
+    background-position: bottom right;
+    width: 400px;
+    height: 30px;
+    -webkit-transform: translate3d(-200px, -260px ,15px) translate3d(0px, -15px, -15px) rotateX(90deg);
+    transform: translate3d(-200px, -260px ,15px) translate3d(0px, -15px, -15px) rotateX(90deg);
+  }
+  .book-bottom {
+    background-image: url('/assets/img/book/book-top.jpg');
+    width: 400px;
+    height: 30px;
+    -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(0px, 505px, -15px) rotateX(-90deg);
+    transform: translate3d(-200px ,-260px ,15px) translate3d(0px, 505px, -15px) rotateX(-90deg);
+  }
+  .book-back {
+    background-color: black;
+    width: 400px;
+    height: 520px;
+    -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(0,0, -30px) rotateY(180deg);
+    transform: translate3d(-200px ,-260px ,15px) translate3d(0,0, -30px) rotateY(180deg);
+  }
+
+  </style>
