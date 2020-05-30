@@ -108,8 +108,8 @@
     background-repeat: repeat;
     background-position: top left;
   }
-  .book-front {
-    background-image: url('{{volume.image}}');
+  .book-front-{{ volume.title | slugify }} {
+    background-image: url('{{ volume.image }}');
     width: 400px;
     height: 520px;
     -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(0,0,0) rotateY(0deg);
