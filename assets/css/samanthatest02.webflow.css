@@ -438,6 +438,36 @@ p a:hover {
   grid-template-rows: auto auto;
 }
 
+.dev-text {
+  position: fixed;
+  z-index: 99;
+  font-family: 'Times New Roman', TimesNewRoman, Times, Baskerville, Georgia, serif;
+  color: #000;
+  font-size: 6vw;
+  line-height: 4vw;
+  letter-spacing: -0.3vw;
+  cursor: none;
+}
+.dev-text.small-title {
+  font-size: 3vw;
+  line-height: 2.5vw;
+  letter-spacing: -0.2vw;
+}
+.dev-intro {
+  position: fixed;
+  z-index: 9;
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background-color: red;
+  background-image: url("/assets/w-images/LOGO-V1-01.svg");
+  background-position: 50% 50%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
 @media screen and (max-width: 767px) {
   .container {
     width: 100%;
