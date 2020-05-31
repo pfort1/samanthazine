@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="container fixed">
+<div class="container story fixed">
   <div class="navigator-container">
     <div class="navigator">
       <a href="/" class="sans-serif">{{site.title}}</a>
@@ -23,5 +23,16 @@ layout: default
     <p class="parapgraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus
       nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p><a data-item-price="10" data-item-name="Item Name" data-item-id="item-name" data-item-url="/shop-snipcart-item" data-item-max-quantity="1"
       data-item-shippable="false" href="#" class="item-link snipcart-add-item">Buy Now</a>
+  </div>
+  <div class="images-content">
+    <div class="parapgraph">Images:</div>
+    <div class="image-collection">
+      {% for image in page.images %}
+      <div class="item image">
+        <div class="item-lightbox story-image"> <img src="{{ image }}" alt="{{ image }}"> </div>
+        <div class="sub-link">image{{ forloop.index }}</div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

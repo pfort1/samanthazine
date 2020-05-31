@@ -136,13 +136,6 @@ collections:
         widget: boolean
         hint: 'false will hide shipping info.'
         default: false
-      - label: Image
-        name: image
-        required: false
-        widget: image
-        media_library:
-          config:
-            multiple: false
       - label: More Images
         name: images
         collapsed: true

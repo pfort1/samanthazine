@@ -54,6 +54,8 @@ sass:
 compress_html:
   clippings: all
 
+plugins:
+  - jekyll-target-blank
 # set some common post defaults
 defaults:
   -
