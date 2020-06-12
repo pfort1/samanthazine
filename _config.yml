@@ -28,10 +28,6 @@ permalink: /blog/:title
 section: true
 
 indev: false
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 collections:
   story:
