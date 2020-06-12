@@ -235,20 +235,24 @@ p {
 .item.image {
   display: inline-block;
 }
-
+.no-animation {
+  animation-play-state: paused !important;
+}
 .item-lightbox {
   position: fixed;
   left: auto;
   top: 0%;
   right: 0%;
   bottom: auto;
-  z-index: 99;
-  display: none;
+  z-index: 9;
   overflow: hidden;
   width: 50%;
   min-height: 100vh;
   background-color: #000;
-  background-image: radial-gradient(circle closest-side at 50% 50%, red, #000);
+}
+.story .navigator.bottom {
+  right: 0;
+  left: auto;
 }
 
 .item-lightbox img {
@@ -280,14 +284,22 @@ p {
   transition: opacity 500ms ease;
 }
 
+.back-button::after {
+  content: "←";
+}
+
 .back-button {
-  width: 16px;
-  height: 16px;
   margin-right: 7px;
-  background-image: url("/assets/w-images/←.svg");
-  background-position: 50% 50%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  font-size: 1.5rem;
+  line-height: 0.5rem;
+  height: 12px;
+}
+
+.dark div,
+.dark a {
+  color: red !important;
+  background-color: black !important;
+  border-color: red !important;
 }
 
 p a {
@@ -441,7 +453,8 @@ p a:hover {
 .dev-text {
   position: fixed;
   z-index: 99;
-  font-family: 'Times New Roman', TimesNewRoman, Times, Baskerville, Georgia, serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
+    serif;
   color: #000;
   font-size: 6vw;
   line-height: 4vw;

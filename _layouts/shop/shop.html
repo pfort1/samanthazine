@@ -18,7 +18,9 @@ layout: default
       {% for item in site.shop %}
       <div class="item">
         <div class="item-lightbox">
-          <img src="{{item.image}}" alt="">
+          {% for image in item.images[0] %}
+          <img src="{{ image }}" alt="">
+          {% endfor %}
         </div>
         <div class="shop-item"><a href="{{item.url}}" class="item-link shop-link w-clearfix">{{item.title}} <span class="item-span">${{item.price}}</span> <span class="item-span preorder">PREORDER</span><br></a></div>
       </div>

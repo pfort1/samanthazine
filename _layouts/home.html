@@ -15,7 +15,7 @@ layout: default
       {% for volume in site.volume %}
       <div class="item">
         <div class="item-lightbox">
-          <img src="{{volume.image}}" alt="">
+          {% include booktemplate.html %}
         </div>
         <a href="{{ volume.url }}" class="item-link">{{ volume.title }}</a>
       </div>
