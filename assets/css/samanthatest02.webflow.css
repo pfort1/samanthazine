@@ -16,8 +16,7 @@ h1 {
 
 p {
   margin-bottom: 0px;
-  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
-    serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia, serif;
   color: #000;
   font-size: 8vw;
   line-height: 6.5vw;
@@ -161,8 +160,7 @@ blockquote {
   border-bottom: 1px solid transparent;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
-  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
-    serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia, serif;
   color: #000;
   font-size: 8vw;
   line-height: 6vw;
@@ -188,8 +186,7 @@ blockquote {
 
 p {
   display: block;
-  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
-    serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia, serif;
   color: #000;
   font-size: 4vw;
   line-height: 3vw;
@@ -235,9 +232,11 @@ p {
 .item.image {
   display: inline-block;
 }
+
 .no-animation {
   animation-play-state: paused !important;
 }
+
 .item-lightbox {
   position: fixed;
   left: auto;
@@ -250,6 +249,7 @@ p {
   min-height: 100vh;
   background-color: #000;
 }
+
 .story .navigator.bottom {
   right: 0;
   left: auto;
@@ -266,11 +266,7 @@ p {
 }
 
 .item-lightbox._2 {
-  background-image: radial-gradient(
-    circle closest-side at 50% 50%,
-    #00ff26,
-    #000
-  );
+  background-image: radial-gradient( circle closest-side at 50% 50%, #00ff26, #000);
 }
 
 .age-gate {
@@ -295,8 +291,7 @@ p {
   height: 12px;
 }
 
-.dark div,
-.dark a {
+.dark div, .dark a {
   color: red !important;
   background-color: black !important;
   border-color: red !important;
@@ -307,8 +302,7 @@ p a {
   margin-top: -1px;
   margin-left: -1px;
   border: 1px solid #000;
-  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
-    serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia, serif;
   color: #000;
   font-size: 4vw;
   line-height: 3vw;
@@ -320,8 +314,7 @@ p a:hover {
 }
 
 .serif-text {
-  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
-    serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia, serif;
   color: #000;
   font-size: 6vw;
   line-height: 4vw;
@@ -453,19 +446,20 @@ p a:hover {
 .dev-text {
   position: fixed;
   z-index: 99;
-  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia,
-    serif;
+  font-family: "Times New Roman", TimesNewRoman, Times, Baskerville, Georgia, serif;
   color: #000;
   font-size: 6vw;
   line-height: 4vw;
   letter-spacing: -0.3vw;
   cursor: none;
 }
+
 .dev-text.small-title {
   font-size: 3vw;
   line-height: 2.5vw;
   letter-spacing: -0.2vw;
 }
+
 .dev-intro {
   position: fixed;
   z-index: 9;

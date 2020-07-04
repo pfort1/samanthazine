@@ -34,11 +34,6 @@
   box-shadow: none;
 }
 
-.snipcart-cart__content {
-  background-color: transparent;
-  height: 100%;
-}
-
 .snipcart-layout__content {
   padding: 0;
   margin: 0;
@@ -83,14 +78,11 @@
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
 .snipcart-cart-button:hover {
   font-style: italic;
 }
-.snipcart-cart-summary-fees__notice.snipcart__font--regular {
-  border: 0px !important;
-  margin: 0;
-  padding: 7px;
-}
+
 .snipcart-input {
   box-shadow: none !important;
   border: 0;
@@ -101,17 +93,21 @@
   padding: 0px;
   margin: 0px;
 }
+
 .snipcart-cart-summary-fees.snipcart-cart-summary-fees--reverse {
   display: flex;
   flex-direction: column;
 }
+
 .snipcart-cart-summary-fees__item.snipcart-cart-summary-fees__total.snipcart__font--bold.snipcart__font--secondary {
   padding: 7px;
   border-top: 1px solid black;
 }
+
 .snipcart__box {
   background-color: red;
 }
+
 .snipcart-cart-button__icon {
   display: none;
 }
@@ -119,7 +115,7 @@
 .snipcart-featured-payment-methods {
   background-color: black;
   border: 0 !important;
-  padding: 7px 7px;
+  padding: 0;
   margin: 0;
 }
 
@@ -142,25 +138,23 @@
   margin: 0;
 }
 
-.snipcart-item-line__content {
-  /*! display: none; */
-}
 .snipcart-item-line__container {
   margin: 0px !important;
   padding: 7px;
 }
+
 .snipcart-cart-header__options {
   display: none;
 }
-.snipcart-cart-header button svg,
-.snipcart-cart-header button span {
+
+.snipcart-cart-header button svg, .snipcart-cart-header button span {
   display: none;
 }
-.snipcart-modal__close-title.snipcart__font--std {
-}
+
 .snipcart-cart-header button::after {
   content: "close";
 }
+
 .snipcart * {
   font-size: 20px;
   line-height: 20px;
@@ -169,87 +163,118 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
+
 .snipcart-cart-header button {
   width: auto;
   flex: 0;
 }
+
 .snipcart-cart-header {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
 }
+
 .snipcart-cart__footer-col {
   width: 100% !important;
 }
+
 .snipcart-cart__footer-col.cart__footer-discount-box.snipcart-cart__actions {
   display: none;
 }
-.snipcart h2 {
-}
+
 .snipcart__icon--red.snipcart__icon {
   display: none;
 }
+
 .snipcart__button--icon:after {
   content: "REMOVE";
 }
+
 .snipcart__button--icon {
   padding: 0px;
   border: 0px;
   margin-left: 15px;
   opacity: 0.3;
 }
+
 .snipcart-item-line__container {
   border-bottom: 1px solid black;
 }
+
 .snipcart-item-line__header {
   margin: 0;
 }
+
 .snipcart-item-list.snipcart-item-list--no-shadow {
-  margin: 0px;
+  margin: 0px 0px 35px 0px;
 }
+
 .snipcart-cart__content {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-}
-.snipcart-cart-summary-fees__notice.snipcart__font--regular {
-  font-family: Times New Roman;
-  text-transform: initial;
+  background-color: transparent;
+  height: 100%;
 }
 
 .snipcart__box--header {
   padding: 0px;
   border-bottom: 1px solid black;
 }
+
 .snipcart__font--subtitle {
   font-weight: normal;
 }
+
 .snipcart-layout__col.snipcart-layout__col--large {
   margin: 0px;
 }
+
 .snipcart__box--badge {
   display: none;
 }
+
 .snipcart-item-line__product {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .snipcart-item-line__info {
   padding: 1px;
 }
+
 .snipcart-item-line__variants {
   padding: 0;
 }
+
 .snipcart-item-quantity__label.snipcart__font--tiny {
   display: none;
 }
+
 .snipcart-item-quantity__quantity.snipcart__font--std {
   display: none;
 }
+
 .snipcart__font--secondary.snipcart__font--bold.snipcart-featured-payment-methods__title {
   display: none;
 }
+
 .snipcart-cart__featured-payment-methods-container {
   margin: 0;
+  position: relative;
+}
+
+.snipcart-cart-summary-fees__notice .snipcart__font--regular {
+  font-family: arial;
+  text-transform: inherit;
+  opacity: 1;
+  color: #0000004f;
+  border-top: 1px solid black !important;
+}
+
+.snipcart-cart-summary-fees__notice {
+  margin: 0 !important;
+  padding: 7px;
+  border-top: 1px solid black;
 }
