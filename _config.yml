@@ -29,7 +29,6 @@ section: true
 
 indev: true
 
-
 collections:
   story:
     output: true

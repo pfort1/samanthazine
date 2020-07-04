@@ -3,9 +3,13 @@
 
 backend:
   name: git-gateway # Netlify’s Git Gateway connects to Git provider’s API
-  branch: master # Branch to update (master by default)
+  branch: dev # Branch to update (master by default)
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
+
+local_backend: true
+
+publish_mode: editorial_workflow
 
 display_url: https://samanthazine.netlify.app
 
@@ -77,7 +81,7 @@ collections:
         widget: relation
         collection: volume
         displayFields: ["title"]
-        searchFields: title
+        searchFields: ["title"]
         valueField: title
   - name: film
     label: FILM
@@ -102,7 +106,7 @@ collections:
         widget: relation
         collection: volume
         displayFields: ["title"]
-        searchFields: title
+        searchFields: ["title"]
         valueField: title
   - name: shop
     label: SHOP
@@ -119,16 +123,16 @@ collections:
         widget: number
         default: "0"
         valueType: int
-        min: "0"
+        min: 0
         step: 1
       - label: Max Quantity
         name: max-quantity
         required: false
         widget: number
         hint: 'max quantity per customer'
-        default: "1"
+        default: 1
         valueType: int
-        min: "1"
+        min: 1
         step: 1
       - label: Ship this item?
         name: ship

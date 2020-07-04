@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   /*
   if (!$.cookie('alert')) {
     $('.age-gate').show();
@@ -25,10 +25,10 @@ $(document).ready(function() {
     }
   })
 
-  $('.intro-logo').on('click', function() {
+  $('.intro-logo').on('click', function () {
     $(this).hide(0);
   })
-  $('#yes-button').on('click', function() {
+  $('#yes-button').on('click', function () {
     $('.age-gate').hide(0);
   })
   var myIndex = 0;
@@ -47,14 +47,11 @@ $(document).ready(function() {
         myIndex = 1
       }
       x[myIndex - 1].style.opacity = "1";
-      timer = setTimeout(autoCarousel, 300); // Change image every 250 milliseconds
+      timer = setTimeout(autoCarousel, 250); // Change image every 250 milliseconds
     }
   }
 
-  autoCarousel()
-
-
-  $('.item-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseenter', function() {
+  $('.item-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseenter', function () {
     var image = $(this).siblings('.item-lightbox').find('img')
     var book = $(this).siblings('.item-lightbox').find('.book-container')
     book.removeClass('no-animation')
@@ -64,29 +61,30 @@ $(document).ready(function() {
     clearTimeout(timer);
   })
 
-  $('.item-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseleave', function() {
+  $('.item-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.item-lightbox img').css('filter', 'blur(5px)')
     autoCarousel()
   })
 
-  $('.item-link.shop-link').on('mouseenter', function() {
+  $('.item-link.shop-link').on('mouseenter', function () {
     $('.item-content, .item-lightbox').hide()
     $(this).siblings('.circle').css('background-color', 'black')
     $(this).parent().siblings('.item-lightbox').show()
     clearTimeout(timer)
   })
 
-  $('.item-link.shop-link').on('click', function() {
+  $('.item-link.shop-link').on('click', function () {
     $(this).parent().siblings('.item-content').show()
     $(this).siblings('.circle').css('background-color', 'black')
   })
 
-  $('.item-link.shop-link').not('.snipcart-add-item').on('mouseleave', function() {
+  $('.item-link.shop-link').not('.snipcart-add-item').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.circle').css('background-color', 'transparent')
     autoCarousel();
   })
   clearTimeout(timer);
+  autoCarousel()
 
 });
