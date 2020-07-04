@@ -27,7 +27,7 @@ permalink: /blog/:title
 # (used as a hook for styling etc)
 section: true
 
-indev: false
+indev: true
 
 collections:
   story:
