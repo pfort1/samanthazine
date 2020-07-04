@@ -3,26 +3,26 @@ layout: default
 ---
 
 <div class="container">
-  <div class="navigator-container">
-    {% include navigator.html %}
-    <div class="navigator l-2">
-      <div class="sans-serif">{{page.title}}</div>
-    </div>
-  </div>
-  <div class="content">
-    <div class="item-collection">
-      {% assign volume = page.title %}
-
-      {% for story in site.story %}
-      {% if story.volume == volume %}
-      <div class="item">
-        <div class="item-lightbox">
-          <img src="{{ story.images[0] }}" alt="">
+    <div class="navigator-container">
+        {% include navigator.html %}
+        <div class="navigator l-2">
+            <div class="sans-serif">{{page.title}}</div>
         </div>
-        <a href="{{ story.url }}" class="item-link">{{ story.title }}</a>
-      </div>
-      {% endif %}
-      {% endfor %}
     </div>
-  </div>
+    <div class="content">
+        <div class="item-collection">
+            {% assign volume = page.title %}
+
+            {% for story in site.story %}
+                {% if story.volume == volume %}
+                    <div class="item">
+                        <div class="item-lightbox">
+                            <img src="{{ story.images[0] }}" alt="">
+                        </div>
+                        <a href="{{ story.url }}" class="item-link">{{ story.title }}</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
