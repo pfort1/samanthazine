@@ -1,7 +1,7 @@
 ---
 layout: shop/shop-item
-title: Item Name
-description: some description about it
+title: "PDF "
+description: "PDF DESCRIPTION "
 price: 15
 max-quantity: "1"
 ship: false
