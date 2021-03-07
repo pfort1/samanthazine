@@ -64,7 +64,7 @@ $(document).ready(function () {
   $('.item-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.item-lightbox img').css('filter', 'blur(5px)')
-    autoCarousel()
+    //autoCarousel()
   })
 
   $('.item-link.shop-link').on('mouseenter', function () {
@@ -82,9 +82,10 @@ $(document).ready(function () {
   $('.item-link.shop-link').not('.snipcart-add-item').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.circle').css('background-color', 'transparent')
-    autoCarousel();
+    //autoCarousel();
   })
+  /*
   clearTimeout(timer);
   autoCarousel()
-
+*/
 });

@@ -1,5 +1,5 @@
 ---
-layout: shop-item-layout
+layout: shop/shop-item
 title: THE BOOK + PDF
 description: "PURCHASE THE BOOK COMES PDF "
 price: 45
