@@ -1,6 +1,6 @@
 ---
 layout: story
-title: test
+title: name
 category: Art (quote + text)
 volume: Vol. II
 ---
