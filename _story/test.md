@@ -1,6 +1,7 @@
 ---
 layout: story
-title: test
+title: Name
+section: story
 category: Art (quote + text)
 volume: Vol. II
 ---

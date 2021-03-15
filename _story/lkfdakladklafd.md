@@ -1,6 +1,7 @@
 ---
 layout: story
 title: Name
+section: story
 category: Art (quote + text)
 text: asdfljldjksjkldfsaljksadf
 quote: asdfjldsfjlsdaf
