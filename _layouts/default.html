@@ -8,17 +8,18 @@ layout: compress
 {% include head.html %}
 
 {% if site.indev == true %}
- {% include indev.html %}
+ {% include index.html %}
 {% else %}
- <body>
+ <body class="body">
 
    {% include age-gate.html %}
    <div class="intro-logo"></div>
 
+   {% include navigator.html %}
+
    {{ content }}
 
-   <div class="overlay"></div>
-
+   
    {% include footer.html %}
  </body>
 {% endif %}

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<main class="grid">
+  {% for volume in site.volume %}
+  <a href="{{volume.url}}" class="mask">
+    {% include booktemplate.html %}
+    <div class="vol-link-text">{{volume.title}}</div>
+  </a>
+  {% endfor %}
+</main>
+

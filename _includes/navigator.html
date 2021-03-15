@@ -1,6 +1,27 @@
-<div class="navigator">
-  {% if page.url != "/"  %}
-  <a href="/" class="back-button w-inline-block"></a>
+<div class="nav-container">
+  <div class="nav {% if page.section == 'story' %}story{% endif %} {% if page.section == 'volume' %}half{% endif %}">
+    <a href="/" class="nav-link">SAMANTHA ZINE</a>
+  </div>
+  {% if page.section == 'story' or page.section == 'film' %}
+  <div class="nav l-2 story {% if page.section == 'film' %}film{% endif %}">
+    <a href="/volume/{{page.volume | slugify }}" class="nav-link">{{page.volume}}</a>
+    <a href="#" class="nav-link">></a>
+    <a href="{{page.url}}" class="nav-link">{{page.title}}</a>
+  </div>
   {% endif %}
-  <a href="/" class="sans-serif">{{site.title}}</a>
+  {% if page.section == 'volume' %}
+  <div class="nav l-2">
+    <a href="/volumes" class="nav-link">{{page.title}}</a>
+    <div class="div-block-3">
+      <a href="#Info" class="nav-link">Info</a>
+      <a href="#Stories" class="nav-link">Stories</a>
+      <a href="#Films" class="nav-link">Films</a>
+    </div>
+  </div>
+  {% endif %}
+  <div class="nav bottom {% if page.section == 'story' %}story{% endif %} {% if page.section == 'volume' %}half{% endif %}">
+    <a href="#" class="nav-link">INSTAGRAM</a>
+    <a href="#" class="nav-link">CONTACT ME</a>
+    <a href="#" class="nav-link">DONATE</a>
+  </div>
 </div>

@@ -1,6 +1,7 @@
 ---
 layout: story
 title: Kai
+section: story
 category: Art
 text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 quote: "«I desire to see the destruction of beauty.» "

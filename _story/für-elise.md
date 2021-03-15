@@ -1,6 +1,7 @@
 ---
 layout: story
 title: Für Elise
+section: story
 category: Fashion
 text: |-
   Model: [Elki](https://www.instagram.com/maturemodel1/)

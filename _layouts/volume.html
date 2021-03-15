@@ -1,28 +1,61 @@
 ---
 layout: default
 ---
+<div class="main l-2">
 
-<div class="container">
-    <div class="navigator-container">
-        {% include navigator.html %}
-        <div class="navigator l-2">
-            <div class="sans-serif">{{page.title}}</div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="item-collection">
-            {% assign volume = page.title %}
+  <!-- INRO -->
+  <div id="Info" class="anchor"></div>
+  <div class="tabpane">
+    <p class="parapgraph">Samantha​ is a New Age Erotica zine that explores ideas of sexuality and eroticism through photography and other forms of visual art. Samantha​ provides a platform to elevate these artists’ visions of what erotica can be.</p>
+    <p class="parapgraph productinfo">28x25cm / 150pages / $17</p>
+    <a href="story.html" class="buy-button">Buy the book</a>
+  </div>
 
-            {% for story in site.story %}
-                {% if story.volume == volume %}
-                    <div class="item">
-                        <div class="item-lightbox">
-                            <img src="{{ story.images[0] }}" alt="">
-                        </div>
-                        <a href="{{ story.url }}" class="item-link">{{ story.title }}</a>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
+  <!-- STORY -->
+  <div id="Stories" class="anchor"></div>
+  <div class="tabpane">
+    {% assign volumeTitle = page.title %}
+
+    {% for story in site.story %}
+        {% if story.volume == volumeTitle %}
+            <div class="item">
+                <div class="item-lightbox">
+                    <img src="{{ story.images[0] }}" alt="">
+                </div>
+                <a href="{{ story.url }}" class="story-link">{{ story.title }}</a>
+            </div>
+        {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Films -->
+  <div id="Films" class="anchor"></div>
+  <div class="tabpane">
+    {% for film in site.film %}
+    <!-- <a href="{{film.url}}" class="film-item w-inline-block">
+      <div class="film-img">
+        <img src="{{ film.image }}" sizes="100vw" alt=""></div>
+      <div class="film-info">
+        <div class="serif-text small-title">{{ film.title }}</div>
+        <div class="sans-serif right">{{ film.volume }}</div>
+      </div>
+    </a> -->
+    {% if film.volume == volumeTitle %}
+    <div class="item">
+      <div class="item-lightbox">
+        <img src="{{ film.image }}" sizes="100vw" alt="">
+      </div>
+      <a href="{{film.url}}" class="story-link">{{film.title}}</a>
     </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="image-content">
+    {% for volume in site.volume %}
+      {% if volume.title == volumeTitle %}
+      {% include booktemplate.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
