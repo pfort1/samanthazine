@@ -1,6 +1,6 @@
 ---
 layout: story
-title: lkfdakladklafd
+title: Name
 category: Art (quote + text)
 text: asdfljldjksjkldfsaljksadf
 quote: asdfjldsfjlsdaf
