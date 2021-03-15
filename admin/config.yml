@@ -11,7 +11,7 @@ local_backend: false
 
 publish_mode: editorial_workflow
 
-display_url: https://dev.samanthazine.netlify.app
+display_url: https://dev.samanthazine.com
 
 collections:
   - name: pages
