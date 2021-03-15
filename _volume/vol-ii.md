@@ -1,6 +1,6 @@
 ---
 layout: volume
-title: Vol. II
 section: volume
-image: /assets/img/uploads/rectangle-copy-2.png
+title: Vol. II
+image: /assets/img/uploads/book-cover.jpg
 ---
