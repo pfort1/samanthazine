@@ -7,7 +7,8 @@ text: >-
   Chains, studs and leather embellish her dark allure, but there’s a gentle
   introspection in her gaze. Is it an act of seduction or a display of ennui? Or
   perhaps it is all just a performance. Shot by Henry Lou, model and techno DJ
-  Gia personifies a rare, provocative beauty. 
+  Gia personifies a rare, provocative beauty.
+
 
 
 
@@ -26,7 +27,7 @@ text: >-
   Makeup: [Mitch Yoshida](@mitchyoshidamakeup)
 
 
-  Hair: [Tomoaki Sato] (@tomoaki_sato)
+  Hair: [Tomoaki Sato](@tomoaki_sato)
 
 
   Video: [Nora Smith](@aronsmth) 
@@ -38,7 +39,7 @@ text: >-
   Assist: [Motoria](@m_o_t_o_r_i_a_) 
 
 
-  Studio: [WERK STUDIO](@werk_studio) 
+  Studio: [WERK STUDIO](@werk_studio)
 images:
   - /assets/img/uploads/04150007.jpg
   - /assets/img/uploads/20190330_SAMANTHAZINE_08.jpg
