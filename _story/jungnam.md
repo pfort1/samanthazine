@@ -32,8 +32,8 @@ text: >-
 
   Assist: [Romona](https://www.instagram.com/ramonadai/)  [Peter](https://www.instagram.com/petermccain/)
 images:
-  - /assets/img/uploads/_MG_0363.jpg
-  - /assets/img/uploads/_MG_0592.jpg
-  - /assets/img/uploads/_MG_0398.jpg
+  - /assets/img/uploads/MG_0363.jpg
+  - /assets/img/uploads/MG_0592.jpg
+  - /assets/img/uploads/MG_0398.jpg
 volume: Vol. II
 ---
