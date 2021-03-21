@@ -8,8 +8,6 @@ text: |-
 
   Photo: [Danny Lim](https://www.instagram.com/dannny.lim/)
 
-  Video: [Ameer Kazmi](https://www.instagram.com/arizonasandhoneybuns/)
-
   Style: [Samantha-Sungeun Kim](https://www.instagram.com/stylesamantha7/)
 
   Make-Up: [Ayaka Nihei](https://www.instagram.com/ayaka_nihei/)
