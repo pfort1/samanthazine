@@ -13,6 +13,9 @@ publish_mode: editorial_workflow
 
 display_url: https://dev.samanthazine.com
 
+editor:
+    preview: false
+
 collections:
   - name: pages
     label: Pages
