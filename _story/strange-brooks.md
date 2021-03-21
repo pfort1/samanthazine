@@ -1,6 +1,6 @@
 ---
 layout: story
-title: Lucid Dream
+title: Strange Brooks
 section: story
 category: Fashion
 text: |-

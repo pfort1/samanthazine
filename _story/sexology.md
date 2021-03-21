@@ -1,6 +1,6 @@
 ---
 layout: story
-title: Lucid Dream
+title: Sexology
 section: story
 category: Fashion
 text: |-

@@ -1,6 +1,6 @@
 ---
 layout: story
-title: Lucid Dream
+title: Plays Play
 section: story
 category: Fashion
 text: |-

@@ -1,6 +1,6 @@
 ---
 layout: story
-title: Lucid Dream
+title: philiphilia
 section: story
 category: Fashion
 text: |-
