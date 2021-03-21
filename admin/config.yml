@@ -87,7 +87,8 @@ collections:
         name: "category"
         widget: "select"
         options: ["Art", "Fashion", ""]
-      - { label: Text, name: text, widget: 'markdown', required: false, hint: 'put credits or just text, you can add links.', buttons: ['link']}
+      - { label: Text, name: text, widget: 'markdown', required: false, hint: 'just text', buttons: ['link']}
+      - { label: Credits, name: credits, widget: 'markdown', required: false, hint: 'put credits, you can add links.', buttons: ['link']}
       - {label: "Quote", name: "quote", widget: "text", hint: "put a quote", required: false}
       - {label: instagram link, name: instagram, required: false, widget: string}
       - label: Images

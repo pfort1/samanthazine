@@ -8,10 +8,7 @@ text: >-
   introspection in her gaze. Is it an act of seduction or a display of ennui? Or
   perhaps it is all just a performance. Shot by Henry Lou, model and techno DJ
   Gia personifies a rare, provocative beauty.
-
-
-
-
+credits: >-
   Model: [Gia](https://www.instagram.com/g_.i._a/)
 
 
