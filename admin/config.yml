@@ -54,6 +54,9 @@ collections:
         media_library:
           config:
             multiple: true
+      - {label: text, name: text, required: false, widget: string}
+      - {label: price, name: price, required: false, widget: string}
+      - {label: pdf price, name: pdf-price, required: false, widget: string}
   - name: Story
     label: STORY
     folder: _story
@@ -66,7 +69,7 @@ collections:
       - label: "Category"
         name: "category"
         widget: "select"
-        options: ["Art (quote + text)", "Fashion (only text - credits)", ""]
+        options: ["Art", "Fashion", ""]
       - { label: Text, name: text, widget: 'markdown', required: false, hint: 'put credits or just text, you can add links.', buttons: ['link']}
       - {label: "Quote", name: "quote", widget: "text", hint: "put a quote", required: false}
       - {label: instagram link, name: instagram, required: false, widget: string}
