@@ -12,7 +12,7 @@ text: |-
 
   Make-Up: [Ayaka Nihei](https://www.instagram.com/ayaka_nihei/)
 
-  Hair [Takuya Yamaguchi](https://www.instagram.com/tak8133/)
+  Hair: [Takuya Yamaguchi](https://www.instagram.com/tak8133/)
 images:
   - /assets/img/uploads/s_0965_edit.jpg
 volume: Vol. I
