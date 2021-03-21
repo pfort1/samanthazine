@@ -6,11 +6,11 @@
     <div class="boockup">
       <div class="book-container">
         <div class="book-front-{{ volume.title | slugify}}"></div>
-        <div class="book-side-left"></div>
+        <div class="book-side-left-{{ volume.title | slugify}}"></div>
         <div class="book-side-right"></div>
         <div class="book-top"></div>
         <div class="book-bottom"></div>
-        <div class="book-back"></div>
+        <div class="book-back-{{ volume.title | slugify}}"></div>
       </div>
     </div>
   </div>

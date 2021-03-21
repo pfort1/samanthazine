@@ -9,8 +9,6 @@ media_folder: "assets/img/uploads" # Folder where user uploaded files should go
 
 local_backend: false
 
-publish_mode: editorial_workflow
-
 display_url: https://dev.samanthazine.com
 
 editor:

@@ -144,7 +144,8 @@
     -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(0px, 505px, -15px) rotateX(-90deg);
     transform: translate3d(-200px ,-260px ,15px) translate3d(0px, 505px, -15px) rotateX(-90deg);
   }
-  .book-back {
+  .book-back-{{ volume.title | slugify }} {
+    background-image: url('{{ volume.image-back }}');
     background-color: black;
     width: 400px;
     height: 520px;

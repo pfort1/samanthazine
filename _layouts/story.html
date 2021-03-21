@@ -6,19 +6,19 @@ layout: default
   <div class="content story">
     {{page.text | markdownify}}
   </div>
-
+<br><br>
   {% if page.credits %}
   <div class="content story credits">
     {{page.credits | markdownify}}
   </div>
   {% endif %}
-
+  <br><br>
   {% if page.category == "Art" %}
 
   <div class="content art">
     <p class="parapgraph">&quot; {{page.quote}} &quot;</p>
   </div>
-
+  <br><br>
   {% endif %}
   <div class="image-content story"></div>
 
