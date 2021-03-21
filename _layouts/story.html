@@ -7,6 +7,12 @@ layout: default
     {{page.text | markdownify}}
   </div>
 
+  {% if page.credits %}
+  <div class="content story credits">
+    {{page.credits | markdownify}}
+  </div>
+  {% endif %}
+
   {% if page.category == "Art" %}
 
   <div class="content art">
