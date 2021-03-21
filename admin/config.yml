@@ -57,6 +57,20 @@ collections:
         media_library:
           config:
             multiple: true
+      - label: image back
+        name: image-back
+        required: false
+        widget: image
+        media_library:
+          config:
+            multiple: true
+      - label: image spine
+        name: image-spine
+        required: false
+        widget: image
+        media_library:
+          config:
+            multiple: true
       - {label: text, name: text, required: false, widget: string}
       - {label: price, name: price, required: false, widget: string}
       - {label: pdf price, name: pdf-price, required: false, widget: string}
