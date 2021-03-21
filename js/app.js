@@ -6,10 +6,10 @@ $(document).ready(function () {
     $('.age-gate').show();
     $('.intro-logo').show();
     var date = new Date();
-    date = date.setTime(date.getTime() + 5);
+    date = date.setTime(date.getTime());
     console.log(date)
     $.cookie('age-alert', true, {
-      expires: date
+      //expires: date
     });
   }
 
@@ -50,7 +50,7 @@ $(document).ready(function () {
         myIndex = 1
       }
       x[myIndex - 1].style.opacity = "1";
-      timer = setTimeout(autoCarousel, 250); // Change image every 250 milliseconds
+      timer = setTimeout(autoCarousel, 500); // Change image every 250 milliseconds
     }
   }
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
   $('.story-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.item-lightbox img').css('filter', 'blur(5px)')
-    //autoCarousel()
+    autoCarousel()
   })
 
   $('.story-link.shop-link').on('mouseenter', function () {
@@ -85,10 +85,10 @@ $(document).ready(function () {
   $('.story-link.shop-link').not('.snipcart-add-item').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.circle').css('background-color', 'transparent')
-    //autoCarousel();
+    autoCarousel();
   })
   
   clearTimeout(timer);
-  //autoCarousel()
+  autoCarousel()
 
 });

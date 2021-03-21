@@ -20,6 +20,7 @@ a {
   display: block;
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
 blockquote {
@@ -227,7 +228,7 @@ blockquote {
   width: 100%;
   min-height: 100vh;
   background-color: red;
-  background-image: url('../images/LOGO-V1-01.svg');
+  background-image: url('../w-images/LOGO-V1-01.svg');
   background-position: 50% 50%;
   background-size: 75%;
   background-repeat: no-repeat;
@@ -272,7 +273,6 @@ blockquote {
   width: 50%;
   min-height: 100vh;
   background-color: #000;
-  background-image: radial-gradient(circle closest-side at 50% 50%, red, #000);
 }
 
 .item-lightbox img {
@@ -376,6 +376,7 @@ blockquote {
   min-height: 100vh;
   background-color: #000;
   color: #fff;
+  cursor: pointer;
 }
 
 .vol-link-text {
@@ -469,6 +470,7 @@ blockquote {
   line-height: 5.5vw;
   text-align: left;
   letter-spacing: -0.4vw;
+  cursor: pointer;
 }
 
 .buy-button:hover {
@@ -514,7 +516,21 @@ blockquote {
     width: 100%;
   }
 
+  .nav.l-2.story {
+    top: 33px;
+  }
+
   .nav.bottom {
+    width: 100%;
+  }
+
+  .nav.bottom.story {
+    left: 0%;
+    width: 100%;
+  }
+
+  .nav.story {
+    left: 0%;
     width: 100%;
   }
 
@@ -530,7 +546,7 @@ blockquote {
   .content.story {
     margin-top: 375px;
   }
-
+  
   .content.art {
     margin-top: 375px;
   }
@@ -560,16 +576,32 @@ blockquote {
   }
 
   .item-lightbox.story-image {
-    position: fixed;
-    min-height: 460px;
-    padding-top: 87px;
+    padding-top: 0px;
     background-color: #000;
+  }
+
+  .sub-link {
+    font-size: 8vw;
+    line-height: 6vw;
   }
 
   .serif-text.paragraph {
     width: 100%;
     font-size: 8vw;
     line-height: 5.75vw;
+  }
+
+  .images-content {
+    margin-bottom: 67px;
+  }
+
+  .image-collection.mobile {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #000;
   }
 
   .grid {
@@ -599,6 +631,14 @@ blockquote {
     display: none;
     width: 100%;
     min-height: 50vh;
+  }
+
+  .image-content.story {
+    position: relative;
+    top: 0px;
+    display: block;
+    margin-top: 47px;
+    margin-bottom: 0px;
   }
 
   .buy-button {
