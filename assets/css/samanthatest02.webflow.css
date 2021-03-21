@@ -337,16 +337,13 @@ blockquote {
   padding-top: 0px;
 }
 
-.images-content {
-  margin-bottom: 2vw;
-}
-
 .nav-container {
   position: relative;
   z-index: 99;
 }
 
 .image-collection {
+  padding-bottom: 100px;
   grid-auto-columns: 1fr;
   grid-column-gap: 7px;
   grid-row-gap: 7px;
