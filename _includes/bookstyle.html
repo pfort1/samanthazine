@@ -115,7 +115,8 @@
     -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(0,0,0) rotateY(0deg);
     transform: translate3d(-200px ,-260px ,15px) translate3d(0,0,0) rotateY(0deg);
   }
-  .book-side-left {
+  .book-side-left-{{ volume.title | slugify }} {
+    background-image: url('{{ volume.image-spine }}');
     background-color: red;
     width: 30px;
     height: 520px;
