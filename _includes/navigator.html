@@ -13,15 +13,14 @@
   <div class="nav l-2">
     <a href="/volumes" class="nav-link">{{page.title}}</a>
     <div class="div-block-3">
-      <a href="#Info" class="nav-link">Info</a>
       <a href="#Stories" class="nav-link">Stories</a>
       <a href="#Films" class="nav-link">Films</a>
     </div>
   </div>
   {% endif %}
   <div class="nav bottom {% if page.section == 'story' %}story{% endif %} {% if page.section == 'volume' %}half{% endif %}">
-    <a href="#" class="nav-link">INSTAGRAM</a>
-    <a href="#" class="nav-link">CONTACT ME</a>
-    <a href="#" class="nav-link">DONATE</a>
+    <a href="{{site.data.settings.instagram}}" class="nav-link">INSTAGRAM</a>
+    <a href="mailto: {{site.data.settings.email}}" class="nav-link">CONTACT ME</a>
+    <a href="{{site.data.settings.donate}}" class="nav-link">DONATE</a>
   </div>
 </div>

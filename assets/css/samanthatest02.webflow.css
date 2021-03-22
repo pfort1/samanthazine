@@ -37,7 +37,7 @@ blockquote {
   height: 100%;
   min-height: 100vh;
   padding-top: 35px;
-  background-color: red;
+  background-color: #d2232a;
 }
 
 .main.story {
@@ -78,7 +78,7 @@ blockquote {
   -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid #000;
-  background-color: red;
+  background-color: #d2232a;
 }
 
 .nav.l-2 {
@@ -173,7 +173,7 @@ blockquote {
   border-top-color: #000;
   border-bottom-color: #000;
   background-color: #000;
-  color: red;
+  color: #d2232a;
 }
 
 .story-link.fixed {
@@ -200,7 +200,7 @@ blockquote {
 }
 
 .body {
-  background-color: red;
+  background-color: #d2232a;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   color: #000;
   font-size: 20px;
@@ -227,7 +227,7 @@ blockquote {
   display: none;
   width: 100%;
   min-height: 100vh;
-  background-color: red;
+  background-color: #d2232a;
   background-image: url('../w-images/LOGO-V1-01.svg');
   background-position: 50% 50%;
   background-size: 75%;
@@ -281,6 +281,7 @@ blockquote {
   background-size: cover;
   width: 100%;
   object-fit: cover;
+  filter: blur(5px);
 }
 
 .item-lightbox.story-image {
@@ -303,7 +304,7 @@ blockquote {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: red;
+  background-color: #d2232a;
   -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
 }
@@ -317,11 +318,12 @@ blockquote {
   color: #000;
   font-size: 4vw;
   line-height: 3vw;
+  cursor: pointer;
 }
 
 .sub-link:hover, .content p a:hover {
   background-color: #000;
-  color: red;
+  color: #d2232a;
 }
 
 .serif-text {
@@ -376,6 +378,15 @@ blockquote {
   cursor: pointer;
 }
 
+.storytagbar {
+  padding: 10px 7px;
+  background-color: black;
+  color: #d2232a;
+  text-transform: uppercase;
+  /* position: sticky;
+  top: 70px; */
+}
+
 .vol-link-text {
   position: absolute;
   left: 50%;
@@ -390,7 +401,7 @@ blockquote {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: 'Times New Roman', TimesNewRoman, Times, Baskerville, Georgia, serif;
-  color: red;
+  color: #d2232a;
   font-size: 8vw;
   line-height: 6vw;
   text-align: left;
@@ -417,7 +428,6 @@ blockquote {
   position: relative;
   min-height: 100vh;
   padding-top: 70px;
-  padding-bottom: 150px;
 }
 
 .image-content {
@@ -458,7 +468,7 @@ blockquote {
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  background-color: red;
+  background-color: #d2232a;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   font-family: 'Times New Roman', TimesNewRoman, Times, Baskerville, Georgia, serif;
@@ -474,7 +484,7 @@ blockquote {
   border-top-color: #000;
   border-bottom-color: #000;
   background-color: #000;
-  color: red;
+  color: #d2232a;
 }
 
 .anchor {
@@ -487,6 +497,11 @@ blockquote {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.smaller, .credits p, .credits p a {
+  font-size: 3vw;
+  line-height: 2.5vw;
 }
 
 @media screen and (max-width: 767px) {
@@ -509,7 +524,7 @@ blockquote {
   }
 
   .nav.l-2 {
-    top: 32px;
+    top: 33px;
     width: 100%;
   }
 
@@ -539,10 +554,6 @@ blockquote {
     font-size: 18px;
     line-height: 18px;
   }
-
-  .content.story {
-    margin-top: 375px;
-  }
   
   .content.art {
     margin-top: 375px;
@@ -557,6 +568,11 @@ blockquote {
   .parapgraph, .content p {
     font-size: 8vw;
     line-height: 6vw;
+  }
+
+  .smaller, .credits p, .credits p a {
+    font-size: 6.5vw;
+    line-height: 5.5vw;
   }
 
   .parapgraph.productinfo {
@@ -650,5 +666,23 @@ blockquote {
   .item-lightbox.story-image {
     display: block;
   }
+
+  .images-content {
+    position: relative;
+  }
+
+.item-lightbox.story-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 9;
+}
+
+.image-content.story {
+display: none;
+}
+
 }
 

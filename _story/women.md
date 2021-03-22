@@ -25,4 +25,5 @@ text: |-
 images:
   - /assets/img/uploads/6-1.jpg
 volume: Vol. II
+film: 'Women'
 ---

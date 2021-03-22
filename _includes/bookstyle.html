@@ -85,8 +85,8 @@
     transform-style: preserve-3d;
   }
   .boockup {
-    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   .book-container {
     -webkit-transform-style: preserve-3d;
@@ -117,7 +117,7 @@
   }
   .book-side-left-{{ volume.title | slugify }} {
     background-image: url('{{ volume.image-spine }}');
-    background-color: red;
+    background-color: black;
     width: 30px;
     height: 520px;
     -webkit-transform: translate3d(-200px ,-260px ,15px) translate3d(-15px, 0, -15px) rotateY(-90deg);

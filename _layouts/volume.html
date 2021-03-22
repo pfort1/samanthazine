@@ -7,34 +7,49 @@ layout: default
   <div id="Info" class="anchor"></div>
   <div class="tabpane">
     <p class="parapgraph">{{page.text}}</p>
-    <p class="parapgraph productinfo">28x25cm / 150pages / $17</p>
-    <a href="story.html" class="buy-button snipcart-add-item"  data-item-price="30" data-item-name="{{page.title}} -  Samanthazine" data-item-id="{{page.title}}-zine" data-item-url="{{page.url}}" data-item-max-quantity="1"
-    data-item-shippable="true"  data-item-custom1-name="test" data-item-custom1-options="Book + PDF|PDF only[-10.00]" data-item-custom1-value="Book + PDF">Buy the book</a>
+    <p class="parapgraph productinfo smaller">{{page.height}}x{{page.width}}cm / {{page.pagecount}}pages / ${{page.price}}</p>
+    <a href="story.html" class="buy-button snipcart-add-item"  data-item-price="{{page.price}}" data-item-name="{{page.title}} -  Samanthazine" data-item-id="{{page.title}}-zine" data-item-url="{{page.url}}" data-item-max-quantity="1"
+    data-item-shippable="true"  data-item-custom1-name="test" data-item-custom1-options="Book + PDF|PDF only[{{page.pdf-price}}]" data-item-custom1-value="Book + PDF">Buy the book</a>
   </div>
 
   <!-- STORY -->
   <div id="Stories" class="anchor"></div>
-  <div>Artist</div>
-  <div>Editorial</div>
-  </div>
-  <div class="tabpane">
-    {% assign volumeTitle = page.title %}
+  {% assign volumeTitle = page.title %}
+  {% assign volStories = site.story | where:'volume', volumeTitle %}
+  {% assign storiesArt = volStories | where:'category','Art' %}
+  {% assign storiesEditorial = volStories | where: 'category' ,'Fashion' %}
 
-    {% for story in site.story %}
-        {% if story.volume == volumeTitle %}
+  <div class="tabpane">
+   
+    <div class="storytagbar">Artist</div>
+    {% for story in storiesArt %} 
             <div class="item">
                 <div class="item-lightbox">
                     <img src="{{ story.images[0] }}" alt="">
                 </div>
                 <a href="{{ story.url }}" class="story-link">{{ story.title }}</a>
             </div>
-        {% endif %}
     {% endfor %}
+
+    <div class="storytagbar">Fashion</div>
+    {% for story in storiesEditorial %} 
+            <div class="item">
+                <div class="item-lightbox">
+                    <img src="{{ story.images[0] }}" alt="">
+                </div>
+                <a href="{{ story.url }}" class="story-link">{{ story.title }}</a>
+            </div>
+    {% endfor %}
+
+
   </div>
 
   <!-- Films -->
   <div id="Films" class="anchor"></div>
+
+  
   <div class="tabpane">
+    <div class="storytagbar">Films</div>
     {% for film in site.film %}
     <!-- <a href="{{film.url}}" class="film-item w-inline-block">
       <div class="film-img">

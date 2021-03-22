@@ -19,14 +19,14 @@ collections:
     label: Pages
     delete: false
     files:
-      - file: /pages/info.md
-        label: Info
-        name: info
+      - file: /_data/settings.yml
+        label: Settings
+        name: Settings
         fields:
-          - { label: layout, name: layout, widget: hidden, default: info }
-          - {label: Text, name: text, required: false, widget: markdown,hint: "", default: "", buttons: ['link']}
+          - { label: text, name: text, widget: string }
           - {label: instagram, name: instagram, required: false, widget: string, hint: "", default: ""}
-          - {label: image, name: image, required: false, widget: image}
+          - {label: donate link, name: donate, required: false, widget: string, hint: "", default: ""}
+          - {label: email, name: email, required: false, widget: string, hint: "", default: ""}
       - file: /pages/shop.md
         label: Shop
         name: shop
@@ -71,7 +71,10 @@ collections:
             multiple: true
       - {label: text, name: text, required: false, widget: string}
       - {label: price, name: price, required: false, widget: string}
-      - {label: pdf price, name: pdf-price, required: false, widget: string}
+      - {label: pdf price difference, name: pdf-price, required: false, widget: string}
+      - {label: Width (cm), name: width, required: false, widget: string}
+      - {label: Height (cm), name: height, required: false, widget: string}
+      - {label: page count, name: pagecount, required: false, widget: string}
   - name: Story
     label: STORY
     folder: _story
@@ -104,6 +107,14 @@ collections:
         displayFields: ["title"]
         searchFields: ["title"]
         valueField: title
+      - label: Film
+        name: film
+        required: false
+        widget: relation
+        collection: film
+        displayFields: ["title"]
+        searchFields: ["title"]
+        valueField: title
   - name: film
     label: FILM
     folder: _film
@@ -130,42 +141,3 @@ collections:
         displayFields: ["title"]
         searchFields: ["title"]
         valueField: title
-  - name: shop
-    label: SHOP
-    folder: _shop
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: layout, name: layout, widget: hidden,default: shop-item-layout, required: false }
-      - {label: title, name: title, required: false, widget: string}
-      - {label: "Description", name: "description", widget: "text", buttons: ['link']}
-      - label: Price
-        name: price
-        required: false
-        widget: number
-        default: "0"
-        valueType: int
-        min: 0
-        step: 1
-      - label: Max Quantity
-        name: max-quantity
-        required: false
-        widget: number
-        hint: 'max quantity per customer'
-        default: 1
-        valueType: int
-        min: 1
-        step: 1
-      - label: Ship this item?
-        name: ship
-        required: false
-        widget: boolean
-        hint: 'false will hide shipping info.'
-        default: false
-      - label: More Images
-        name: images
-        collapsed: true
-        required: false
-        widget: list
-        allow_add: true
-        field: {label: Image, name: image, widget: image}

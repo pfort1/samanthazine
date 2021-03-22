@@ -18,12 +18,12 @@ layout: default
   <div class="content art">
     <p class="parapgraph">&quot; {{page.quote}} &quot;</p>
   </div>
-  <br><br>
+  <br><br><br><br>
   {% endif %}
   <div class="image-content story"></div>
 
   <div class="images-content">
-    <div class="parapgraph">Images:</div>
+    <div class="parapgraph">Images</div>
     <div class="image-collection">
       {% for image in page.images %}
       <div class="item image">
@@ -34,45 +34,14 @@ layout: default
     </div>
   </div>
 
-</div>
-
-<!-- 
-<div class="container story">
-  <div class="navigator-container">
-    <div class="navigator">
-      <a href="/" class="sans-serif">{{site.title}}</a>
-    </div>
-    <div class="navigator l-2">
-      <a href="/volume/{{page.volume | slugify}}" class="back-button w-inline-block"></a>
-      <a href="/volume/{{page.volume | slugify}}" class="sans-serif">{{page.volume}}</a></div>
-    <div class="navigator l-2 l-3">
-      <div class="sans-serif">{{page.title}}</div>
-      <div class="sans-serif">{{page.category}}</div>
-    </div>
-  </div>
-
-  <div class="content story">
-    {{page.text | markdownify}}
-  </div>
-
-  {% if page.category == "Art" %}
-
-  <div class="content art">
-    <p class="parapgraph">&quot; Quote &quot;</p>
-  </div>
-
+  {% if page.film %}
+  {% assign film = site.film | where: 'title', page.film %}
+  {{film}}
+    <div class="parapgraph">Film</div>
+    <br>
+    <a  class="sub-link nohover" href="">{{page.film}}</a>
   {% endif %}
 
-  <div class="images-content">
-    <div class="parapgraph">Images:</div>
-    <div class="image-collection">
-      {% for image in page.images %}
-      <div class="item image">
-        <div class="item-lightbox story-image"> <img src="{{ image }}" alt="{{ image }}"> </div>
-        <div class="sub-link">image{{ forloop.index }}</div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+  <br>  <br>  <br>  <br>  <br>  <br>
 
-</div> -->
+</div>

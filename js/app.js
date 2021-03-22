@@ -1,4 +1,20 @@
 $(document).ready(function () {
+
+  function getCenter(element) {
+    const {left, top, width, height} = element.getBoundingClientRect();
+    return {x: left + width / 2, y: top + height / 2}
+}
+
+// const arrow = document.querySelector(".boockup");
+// var w = window.innerWidth;
+// var h = window.innerHeight;
+// const arrowCenter = getCenter(arrow);
+// addEventListener("mousemove", ({clientX, clientY}) => {
+//     const angleY = (clientY / h) * 180;
+//     const angleX = (clientY / h) * 180;
+//     arrow.style.transform = `rotate(-${angleX}deg)`;
+// });
+  
   console.log($.cookie())
 
   if (!$.cookie('age-alert')) {
@@ -6,10 +22,10 @@ $(document).ready(function () {
     $('.age-gate').show();
     $('.intro-logo').show();
     var date = new Date();
-    date = date.setTime(date.getTime());
+    date = date.setTime(date.getTime() + 60);
     console.log(date)
     $.cookie('age-alert', true, {
-      //expires: date
+      expires: date
     });
   }
 
@@ -54,7 +70,7 @@ $(document).ready(function () {
     }
   }
 
-  $('.story-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseenter', function () {
+  $('.story-link, .sub-link').not('.shop-link, .snipcart-add-item, .nohover').on('mouseenter', function () {
     var image = $(this).siblings('.item-lightbox').find('img')
     var book = $(this).siblings('.item-lightbox').find('.book-container')
     book.removeClass('no-animation')
@@ -64,10 +80,13 @@ $(document).ready(function () {
     clearTimeout(timer);
   })
 
-  $('.story-link, .sub-link').not('.shop-link, .snipcart-add-item').on('mouseleave', function () {
+  $('.story-link, .sub-link').not('.shop-link, .snipcart-add-item, .nohover').on('mouseleave', function () {
     $('.item-lightbox').css('opacity', '0')
     $('.item-lightbox img').css('filter', 'blur(5px)')
-    autoCarousel()
+    if ($('html').attr('data-current') == 'story') {
+      autoCarousel();
+    }
+    
   })
 
   $('.story-link.shop-link').on('mouseenter', function () {
