@@ -5,21 +5,23 @@ layout: default
 
   <div class="content story">
     {{page.text | markdownify}}
+    {% if page.category == "Art" %}
+    <br><br>
+      <p class="parapgraph">&quot; {{page.quote}} &quot;</p>
+    {% endif %}
   </div>
+  
 <br><br>
+
+
   {% if page.credits %}
   <div class="content story credits">
     {{page.credits | markdownify}}
   </div>
+  
   {% endif %}
-  <br><br>
-  {% if page.category == "Art" %}
 
-  <div class="content art">
-    <p class="parapgraph">&quot; {{page.quote}} &quot;</p>
-  </div>
-  <br><br><br><br>
-  {% endif %}
+  <br><br>
   <div class="image-content story"></div>
 
   <div class="images-content">
@@ -27,7 +29,7 @@ layout: default
     <div class="image-collection">
       {% for image in page.images %}
       <div class="item image">
-        <div class="item-lightbox story-image"> <img src="{{ image }}" alt="{{ image }}"> </div>
+        <div class="item-lightbox story-image"> <img src="{{ image }}" alt="{{ image }}"></div>
         <div class="sub-link">image{{ forloop.index }}</div>
       </div>
       {% endfor %}

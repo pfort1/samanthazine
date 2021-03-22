@@ -15,13 +15,17 @@ layout: default
   <!-- STORY -->
   <div id="Stories" class="anchor"></div>
   {% assign volumeTitle = page.title %}
+  {% if volumeTitle == "Vol. II" %}
+  {% assign voltwo = true %}
+  {% endif %}
   {% assign volStories = site.story | where:'volume', volumeTitle %}
   {% assign storiesArt = volStories | where:'category','Art' %}
   {% assign storiesEditorial = volStories | where: 'category' ,'Fashion' %}
 
   <div class="tabpane">
-   
+    {% if voltwo %}
     <div class="storytagbar">Artist</div>
+    {% endif %}
     {% for story in storiesArt %} 
             <div class="item">
                 <div class="item-lightbox">
@@ -30,8 +34,9 @@ layout: default
                 <a href="{{ story.url }}" class="story-link">{{ story.title }}</a>
             </div>
     {% endfor %}
-
+    {% if voltwo %}
     <div class="storytagbar">Fashion</div>
+    {% endif %}
     {% for story in storiesEditorial %} 
             <div class="item">
                 <div class="item-lightbox">
@@ -49,7 +54,9 @@ layout: default
 
   
   <div class="tabpane">
+    {% if voltwo %}
     <div class="storytagbar">Films</div>
+    {% endif %}
     {% for film in site.film %}
     <!-- <a href="{{film.url}}" class="film-item w-inline-block">
       <div class="film-img">
