@@ -3,7 +3,8 @@ layout: story
 section: story
 title: Cheeky is Succubus
 category: Fashion
-text: |-
+text: ""
+credits: |-
   Model: [Cheeky](https://www.instagram.com/cheekymaa/)
 
   Photo: [Danny Lim](https://www.instagram.com/dannny.lim/)
