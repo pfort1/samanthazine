@@ -3,7 +3,7 @@ layout: story
 title: Sexology
 section: story
 category: Fashion
-text: |-
+credits: |-
   Model: [Cheeky](https://www.instagram.com/cheekymaa/)
 
   Photography: [Danny Lim](https://www.instagram.com/dannny.lim/)

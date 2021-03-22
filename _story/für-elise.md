@@ -3,7 +3,7 @@ layout: story
 section: story
 title: Für Elise
 category: Fashion
-text: |-
+credits: |-
   Model: [Elki](https://www.instagram.com/maturemodel1/)
 
   Photo: [Oh E](https://www.instagram.com/ohhhheeeee/)

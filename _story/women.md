@@ -5,7 +5,7 @@ section: story
 category: Fashion
 text: |- 
     Poised in a dim, sultry glow, model and professional body builder Nicole Zenobia Graham exhibits her physique in Dannah Gottlieb’s series on women. Stamina, power and beauty reverberate in her poses, and her spirit is palpable through the razzle dazzle of lighting and screen manipulations.
-    
+credits: |-
     Model: [Nicole Zenobia](https://www.instagram.com/worldofzenobia/)
 
     Photography: [Dannah Gottlieb](https://www.instagram.com/dannah.co/)

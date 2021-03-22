@@ -27,18 +27,6 @@ collections:
           - {label: instagram, name: instagram, required: false, widget: string, hint: "", default: ""}
           - {label: donate link, name: donate, required: false, widget: string, hint: "", default: ""}
           - {label: email, name: email, required: false, widget: string, hint: "", default: ""}
-      - file: /pages/shop.md
-        label: Shop
-        name: shop
-        fields:
-          - { label: layout, name: layout, widget: hidden, default: shop/shop-item }
-          - {label: image, name: image, required: false, widget: image}
-      - file: /pages/film.md
-        label: Films
-        name: film
-        fields:
-          - { label: layout, name: layout, widget: hidden, default: film/film }
-          - {label: image, name: image, required: false, widget: image}
   - name: volume
     label: VOL.
     folder: _volume

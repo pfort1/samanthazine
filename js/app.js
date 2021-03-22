@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.age-gate').show();
     $('.intro-logo').show();
     var date = new Date();
-    date = date.setTime(date.getTime() + 60);
+    date = date.setTime(date.getTime() + 1000 * 60 * 60 );
     console.log(date)
     $.cookie('age-alert', true, {
       expires: date
