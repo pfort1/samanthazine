@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-  function getCenter(element) {
-    const {left, top, width, height} = element.getBoundingClientRect();
-    return {x: left + width / 2, y: top + height / 2}
-}
 
 // const arrow = document.querySelector(".boockup");
 // var w = window.innerWidth;
@@ -15,7 +11,7 @@ $(document).ready(function () {
 //     arrow.style.transform = `rotate(-${angleX}deg)`;
 // });
   
-  console.log($.cookie())
+  //console.log($.cookie())
 
   if (!$.cookie('age-alert')) {
 
@@ -50,6 +46,12 @@ $(document).ready(function () {
   $('#yes-button').on('click', function () {
     $('.age-gate').hide(0);
   })
+
+  $('.age-gate a').not('#yes-button').on('click', function () {
+    alert('Sorry! Come back in a few years!');
+  })
+
+
   var myIndex = 0;
   var timer;
 
