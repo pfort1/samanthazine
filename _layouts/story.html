@@ -7,7 +7,7 @@ layout: default
     {{page.text | markdownify}}
     {% if page.category == "Art" %}
     <br><br>
-      <p class="parapgraph">&quot; {{page.quote}} &quot;</p>
+      <p class="paragraph">&quot; {{page.quote}} &quot;</p>
     {% endif %}
   </div>
   
@@ -25,7 +25,7 @@ layout: default
   <div class="image-content story"></div>
 
   <div class="images-content">
-    <div class="parapgraph">Images</div>
+    <div class="paragraph">Images</div>
     <div class="image-collection">
       {% for image in page.images %}
       <div class="item image">
@@ -39,7 +39,7 @@ layout: default
   {% if page.film %}
   {% assign film = site.film | where: 'title', page.film %}
   {{film}}
-    <div class="parapgraph">Film</div>
+    <div class="paragraph">Film</div>
     <br>
     <a  class="sub-link nohover" href="">{{page.film}}</a>
   {% endif %}

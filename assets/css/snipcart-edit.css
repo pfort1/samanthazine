@@ -25,8 +25,8 @@
   width: 50%;
   left: 0;
   min-height: auto;
-  top: 35px;
-  height: calc(100vh - 35px);
+  top: 70px;
+  height: calc(100vh - 70px);
   left: auto;
   background-color: #e4111a;
   transition: none !important;

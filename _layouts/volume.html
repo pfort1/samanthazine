@@ -5,10 +5,11 @@ layout: default
 
   <!-- INRO -->
   <div class="tabpane" id="Info" style="display: block">
-    <p class="parapgraph">{{page.text}}</p>
-<p class="parapgraph productinfo smaller">{{page.height}}x{{page.width}}cm / {{page.pagecount}}pages {% if page.price %}/ ${{page.price}}{% endif %}</p>
+    <p class="paragraph">{{page.text}}</p>
+<p class="paragraph productinfo smaller">{{page.height}}x{{page.width}}cm / {{page.pagecount}}pages {% if page.price %}/ ${{page.price}}{% endif %}</p>
 
     {% if page.price %}
+      <br>
     <a href="story.html" class="buy-button snipcart-add-item"  data-item-price="{{page.price}}" data-item-name="{{page.title}} -  Samanthazine" data-item-id="{{page.title}}-zine" data-item-url="{{page.url}}" data-item-max-quantity="1"
     data-item-shippable="true"  data-item-custom1-name="test" data-item-custom1-options="Book + PDF|PDF only[{{page.pdf-price}}]" data-item-custom1-value="Book + PDF">Buy the book</a>
     {% endif %}
