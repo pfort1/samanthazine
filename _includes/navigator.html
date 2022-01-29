@@ -4,7 +4,7 @@
 
   </div>
 
-  {% if page.section == 'volume' or page.section == 'story' %}
+  {% if page.section == 'volume' or page.section == 'story' or page.section == 'film' %}
   <div class="nav l-2">
 
     <div style="display: flex;">
@@ -16,20 +16,22 @@
     <div class="div-block-3">
       {% for vol in site.volume %}
         {% if page.url == vol.url or page.volume == vol.title %}
-          <a href="{{vol.url}}?tab=Info"  id="Info"  onclick="showtabnav(event)" class="nav-link">Info</a>
-          <a href="{{vol.url}}?tab=Stories"  id="Stories"  onclick="showtabnav(event)" class="nav-link {% if page.section == 'story' %}active{% endif %}">Stories</a>
-          <a href="{{vol.url}}?tab=Films" id="Films" onclick="showtabnav(event)" class="nav-link">Films</a>
+          <a href="{{vol.url}}?tab=Info"  id="Info"  class="nav-link">Info</a>
+          <a href="{{vol.url}}?tab=Stories"  id="Stories" class="nav-link {% if page.section == 'story' %}active{% endif %}">Stories</a>
+          <a href="{{vol.url}}?tab=Films" id="Films" class="nav-link {% if page.section == 'film' %}active{% endif %}">Films</a>
         {% endif %}
       {% endfor %}
     </div>
   </div>
   {% endif %}
 
-  {% if page.section == 'story' %}
+  {% if page.section == 'story' or page.section == 'film' %}
     <div class="nav l-3">
 
       <a href="{{page.url}}" class="nav-link">{{page.title}}</a>
-      
+{% if page.section == 'film' %}
+      <a href="{{vol.url}}?tab=Filminfo"  id="Filminfo"  class="nav-link">Info</a>
+{% endif %}
     </div>
  
   {% endif %}

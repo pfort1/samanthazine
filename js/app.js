@@ -15,10 +15,17 @@
     })
 
     document.querySelector('.tabpane#'+currenttab).style.display = 'block';
+    if ( document.querySelector('.video-embed') ) {
+      document.querySelector('.video-embed').style.display = 'none';
+    }
 
-  } else if (!document.querySelector('#Stories.active')) {
+  } else if (!document.querySelector('#Stories.active') && !document.querySelector('#Films.active')) {
     document.querySelector('.nav-link#Info').classList.add('active')
   }
+
+  if ( document.querySelector('#Films.active') && !params.has('tab') ) {
+    document.querySelector('.l-3 > .nav-link').classList.add('active')
+  }  
 
 $(document).ready(function () {
 
@@ -61,7 +68,7 @@ function rotateCube() {
 }
 // this function return the corresponding angle for an x value
 function getAngle(x) {
-  return 360 - 180 * x;
+  return 360 - 360 * x;
 }
 function getWidth() {
   return Math.max(

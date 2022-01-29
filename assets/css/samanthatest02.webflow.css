@@ -105,11 +105,11 @@ blockquote {
 }
 
 .nav.l-3 > a {
-width: 100%;
-background: black;
-color: red;
 }
-
+[data-current="film"] .nav.l-2,
+[data-current="film"] .nav.l-3 {
+  width: 100%;
+}
 .nav.l-2.story {
   /* -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
