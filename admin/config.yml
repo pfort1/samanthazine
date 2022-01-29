@@ -11,6 +11,8 @@ local_backend: false
 
 display_url: https://dev.samanthazine.com
 
+publish_mode: editorial_workflow
+
 editor:
     preview: false
 
