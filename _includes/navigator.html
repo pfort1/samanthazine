@@ -1,26 +1,41 @@
 <div class="nav-container">
-  <div class="nav {% if page.section == 'story' %}story{% endif %} {% if page.section == 'volume' %}half{% endif %}">
-    <a href="/" class="nav-link">SAMANTHA ZINE</a>
+  <div class="nav {% if page.section == 'story' %}story{% endif %} {% if page.section == 'volume' or page.section == 'story' %}half{% endif %}">
+    <a href="/" class="nav-link logo"><img class="nav-logo" alt="Samantha Zine" src="/assets/w-images/LOGO-V1-01.svg"></a>
+
   </div>
-  {% if page.section == 'story' or page.section == 'film' %}
-  <div class="nav l-2 story {% if page.section == 'film' %}film{% endif %}">
-    <a href="/volume/{{page.volume | slugify }}" class="nav-link">{{page.volume}}</a>
-    <a href="#" class="nav-link">></a>
-    <a href="{{page.url}}" class="nav-link">{{page.title}}</a>
-  </div>
-  {% endif %}
-  {% if page.section == 'volume' %}
+
+  {% if page.section == 'volume' or page.section == 'story' %}
   <div class="nav l-2">
-    <a href="/volumes" class="nav-link">{{page.title}}</a>
+
+    <div style="display: flex;">
+      {% for vol in site.volume %}
+      <a href="{{vol.url}}" class="nav-link {% if page.url == vol.url or page.volume == vol.title %}active{% endif %}">{{vol.title}}</a>
+      {% endfor %}
+    </div>
+
     <div class="div-block-3">
-      <a href="#Stories" class="nav-link">Stories</a>
-      <a href="#Films" class="nav-link">Films</a>
+      {% for vol in site.volume %}
+        {% if page.url == vol.url or page.volume == vol.title %}
+          <a href="{{vol.url}}?tab=Info"  id="Info"  onclick="showtabnav(event)" class="nav-link">Info</a>
+          <a href="{{vol.url}}?tab=Stories"  id="Stories"  onclick="showtabnav(event)" class="nav-link {% if page.section == 'story' %}active{% endif %}">Stories</a>
+          <a href="{{vol.url}}?tab=Films" id="Films" onclick="showtabnav(event)" class="nav-link">Films</a>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
   {% endif %}
+
+  {% if page.section == 'story' %}
+    <div class="nav l-3">
+
+      <a href="{{page.url}}" class="nav-link">{{page.title}}</a>
+      
+    </div>
+ 
+  {% endif %}
+
   <div class="nav bottom {% if page.section == 'story' %}story{% endif %} {% if page.section == 'volume' %}half{% endif %}">
     <a href="{{site.data.settings.instagram}}" class="nav-link">INSTAGRAM</a>
     <a href="mailto: {{site.data.settings.email}}" class="nav-link">CONTACT ME</a>
-    <a href="{{site.data.settings.donate}}" class="nav-link">DONATE</a>
   </div>
 </div>

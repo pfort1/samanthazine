@@ -4,16 +4,18 @@ layout: default
 <div class="main l-2">
 
   <!-- INRO -->
-  <div id="Info" class="anchor"></div>
-  <div class="tabpane">
+  <div class="tabpane" id="Info" style="display: block">
     <p class="parapgraph">{{page.text}}</p>
-    <p class="parapgraph productinfo smaller">{{page.height}}x{{page.width}}cm / {{page.pagecount}}pages / ${{page.price}}</p>
+<p class="parapgraph productinfo smaller">{{page.height}}x{{page.width}}cm / {{page.pagecount}}pages {% if page.price %}/ ${{page.price}}{% endif %}</p>
+
+    {% if page.price %}
     <a href="story.html" class="buy-button snipcart-add-item"  data-item-price="{{page.price}}" data-item-name="{{page.title}} -  Samanthazine" data-item-id="{{page.title}}-zine" data-item-url="{{page.url}}" data-item-max-quantity="1"
     data-item-shippable="true"  data-item-custom1-name="test" data-item-custom1-options="Book + PDF|PDF only[{{page.pdf-price}}]" data-item-custom1-value="Book + PDF">Buy the book</a>
+    {% endif %}
   </div>
 
   <!-- STORY -->
-  <div id="Stories" class="anchor"></div>
+
   {% assign volumeTitle = page.title %}
   {% if volumeTitle == "Vol. II" %}
   {% assign voltwo = true %}
@@ -22,7 +24,7 @@ layout: default
   {% assign storiesArt = volStories | where:'category','Art' %}
   {% assign storiesEditorial = volStories | where: 'category' ,'Fashion' %}
 
-  <div class="tabpane">
+  <div class="tabpane" id="Stories">
     {% if voltwo %}
     <div class="storytagbar">Artist</div>
     {% endif %}
@@ -49,11 +51,8 @@ layout: default
 
   </div>
 
-  <!-- Films -->
-  <div id="Films" class="anchor"></div>
-
-  
-  <div class="tabpane">
+  <!-- Films -->  
+  <div class="tabpane" id="Films">
     {% if voltwo %}
     <div class="storytagbar">Films</div>
     {% endif %}

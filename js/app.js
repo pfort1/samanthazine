@@ -1,28 +1,100 @@
+
+
+
+  const params = new URLSearchParams(window.location.search)
+  console.log(params)
+
+  if ( params.has('tab') ) {
+    
+    var currenttab = params.get('tab')
+
+    document.querySelector('.nav-link#'+currenttab).classList.add('active')
+
+    document.querySelectorAll('.tabpane').forEach(function(el){
+      el.style.display = 'none';
+    })
+
+    document.querySelector('.tabpane#'+currenttab).style.display = 'block';
+
+  } else if (!document.querySelector('#Stories.active')) {
+    document.querySelector('.nav-link#Info').classList.add('active')
+  }
+
 $(document).ready(function () {
+
 
 
 // const arrow = document.querySelector(".boockup");
 // var w = window.innerWidth;
 // var h = window.innerHeight;
 // const arrowCenter = getCenter(arrow);
-// addEventListener("mousemove", ({clientX, clientY}) => {
+// w.addEventListener("mousemove", ({clientX, clientY}) => {
 //     const angleY = (clientY / h) * 180;
 //     const angleX = (clientY / h) * 180;
 //     arrow.style.transform = `rotate(-${angleX}deg)`;
 // });
-  
-  //console.log($.cookie())
 
-  if (!$.cookie('age-alert')) {
+const defaultPerspective = '-150px';
+// Track the mouse movemont
+let mouseX = 0;
+let mouseY = 0;
+let lastXDeg = 360;
+let lastYDeg = 360;
+// The speed of the cube following movement
+const speed = 0.1;
+$(document).ready(()=>{
+  setInterval(rotateCube, 33)
+})
+$(document).mousemove(updateMousePosition);
+// Follow mouse movement
+function updateMousePosition(e) {
+  mouseX = e.pageX/getWidth();
+  mouseY = e.pageY/getHeight();
+}
+function rotateCube() {
+  lastXDeg = lastXDeg + (getAngle(mouseX) - lastXDeg
+) * speed;
+  lastYDeg = lastYDeg + (getAngle(mouseY) - lastYDeg
+) * speed;
+    let newStyle = `translateZ(${defaultPerspective}) rotateY(${lastXDeg}deg) rotateX(${lastYDeg}deg)`
+  $('.boockup').css('transform', newStyle);
+}
+// this function return the corresponding angle for an x value
+function getAngle(x) {
+  return 360 - 180 * x;
+}
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  )
+}
+function getHeight() {
+  return Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.documentElement.clientHeight
+  )
+}
 
-    $('.age-gate').show();
+
+
+  if ( $.cookie('activeuser') !== 'true' ) {
     $('.intro-logo').show();
-    var date = new Date();
-    date = date.setTime(date.getTime() + 1000 * 60 * 60 );
-    console.log(date)
-    $.cookie('age-alert', true, {
-      expires: date
-    });
+  } else {
+    $('.intro-logo').hide();
+  }
+  
+
+  if ($.cookie('age-alert') === 'true') {
+    $('.age-gate').hide();
+  } else {
+    $('.age-gate').show();
   }
 
 
@@ -42,9 +114,18 @@ $(document).ready(function () {
 
   $('.intro-logo').on('click', function () {
     $(this).hide(0);
+    $.cookie('activeuser', true)
   })
-  $('#yes-button').on('click', function () {
+
+  $('.age-gate').on('click', function () {
+
     $('.age-gate').hide(0);
+    var date = new Date();
+    date = date.setTime(date.getTime() /*+ 1000 * 60 * 60*/ );
+    $.cookie('age-alert', true, {
+      expires: date
+    });
+
   })
 
   $('.age-gate a').not('#yes-button').on('click', function () {
@@ -109,7 +190,8 @@ $(document).ready(function () {
     autoCarousel();
   })
   
-  clearTimeout(timer);
-  autoCarousel()
-
+  if ($('html').attr('data-current') == 'story') {
+    autoCarousel();
+  }
+  
 });

@@ -42,10 +42,11 @@ blockquote {
 }
 
 .main.story {
-  position: relative;
+  padding-top: 140px;
+  /* position: relative;
   left: 50%;
   width: 50%;
-  padding-top: 70px;
+  padding-top:105px; */
 }
 
 .main.film {
@@ -62,6 +63,7 @@ blockquote {
 }
 
 .nav {
+  padding-right: 5px;
   position: fixed;
   z-index: 9;
   display: -webkit-box;
@@ -77,28 +79,42 @@ blockquote {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #000;
   background-color: #e4111a;
 }
 
 .nav.l-2 {
-  top: 35px;
+  top: 70px;
   width: 50%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
+.nav.l-3 {
+  top: 105px;
+  width: 50%;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 0px;
+}
+
+.nav.l-3 > a {
+width: 100%;
+background: black;
+color: red;
+}
 
 .nav.l-2.story {
-  -webkit-box-pack: start;
+  /* -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
-  justify-content: flex-start;
+  justify-content: flex-start; */
 }
 
 .nav.bottom {
@@ -116,13 +132,13 @@ blockquote {
 }
 
 .nav.bottom.story {
-  left: 50%;
-  width: 50%;
-}
+  /* left: 50%;*/
+  width: 50%; 
+  }
 
 .nav.story {
-  left: 50%;
-  width: 50%;
+  /* left: 50%;
+  width: 50%; */
 }
 
 .nav.film {
@@ -136,13 +152,30 @@ blockquote {
 
 
 .nav-link {
-  margin-right: 5px;
   padding: 7px;
   text-transform: uppercase;
 }
 
+.nav-link.active,
+.nav-link:hover:not(.logo, .not) {
+background: black;
+color: red;
+}
+
+
+button.nav-link {
+  background:none;
+}
+
+.nav-logo {
+  display: block;
+  height: 100%;
+  width: auto;
+  min-height: 55px;
+}
+
 .content.story {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .content.art {
@@ -293,7 +326,8 @@ blockquote {
 }
 
 .item-lightbox.story-image {
-  left: 0px;
+  /* left: 0px;
+  display: block; */
   display: block;
 }
 
@@ -312,9 +346,14 @@ blockquote {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #e4111a;
+  color: #e4111a;
+  background-color: black;
   -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
+}
+
+.age-gate p {
+  color: #e4111a;
 }
 
 .sub-link,
@@ -352,6 +391,7 @@ blockquote {
 }
 
 .nav-container {
+  position: fixed;
   position: relative;
   z-index: 99;
 }
@@ -429,7 +469,7 @@ blockquote {
 
 .div-block-2 {
   position: relative;
-  top: 35px;
+  top: 75px;
 }
 
 .text-span {
@@ -438,9 +478,10 @@ blockquote {
 }
 
 .tabpane {
+  display: none;
   position: relative;
   min-height: 100vh;
-  padding-top: 70px;
+  padding-top: 105px;
 }
 
 .image-content {
@@ -456,7 +497,7 @@ blockquote {
 }
 
 .image-content.story {
-  left: 0px;
+  /* left: 0px; */
 }
 
 .div-block-3 {

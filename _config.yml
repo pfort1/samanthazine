@@ -34,6 +34,7 @@ collections:
     output: true
   volume:
     output: true
+    permalink: /:title
   film:
     output: true
   shop:
