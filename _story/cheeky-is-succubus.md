@@ -18,5 +18,6 @@ text: |-
 images:
   - /assets/img/uploads/photo1.jpg
   - /assets/img/uploads/photo2.jpg
+  - /assets/img/uploads/ samanthazine7.jpg
 volume: Vol. I
 ---
