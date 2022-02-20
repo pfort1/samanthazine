@@ -31,10 +31,9 @@ indev: false
 
 collections:
   story:
-    output: true
+    output: false
   volume:
     output: true
-    permalink: /:title
   film:
     output: true
   shop:

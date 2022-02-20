@@ -8,6 +8,15 @@
   position: relative;
 }
 
+.snipcart-cart__secondary-header {
+background-color: initial;
+}
+
+.snipcart-modal__container.snipcart-cart-summary--edit.snipcart-cart-summary-side {
+width: 100%;
+max-width: 50%;
+}
+
 .swiper-container {
   width: 50%;
   height: 100vh;
@@ -22,7 +31,7 @@
 }
 .snipcart-modal__container {
   position: fixed;
-  width: 50%;
+  width: 100%;
   left: 0;
   min-height: auto;
   top: 70px;
@@ -141,11 +150,11 @@
 
 .snipcart-typeahead__suggestion--active {
   background-color: black;
-  color: #e4111a;
+  color: #e4111a !important;
 }
 
 .snipcart-typeahead__suggestion--active span {
-  color: #e4111a;
+  color: #e4111a !important;
 }
 
 .snipcart-input {

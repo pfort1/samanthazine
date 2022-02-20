@@ -111,7 +111,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: layout, name: layout, widget: hidden,default: film-item-layout, required: false }
+      - { label: layout, name: layout, widget: hidden, default: film/film-item, required: false }
       - { label: section, name: section, widget: hidden,default: film, required: false }
       - {label: title, name: title, required: false, widget: string}
       - {label: Film URL, name: film-url,required: false,widget: string,hint: "put the google drive share URL(https://www.wonderplugin.com/online-tools/google-drive-direct-link-generator/), make sure it s not above 100mb. otherwise video won't show."}

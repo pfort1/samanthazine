@@ -13,12 +13,11 @@
       {% endfor %}
     </div>
 
-    <div class="div-block-3">
+    <div class="navlinkcontainer">
       {% for vol in site.volume %}
         {% if page.url == vol.url or page.volume == vol.title %}
-          <a href="{{vol.url}}?tab=Info"  id="Info"  class="nav-link">Info</a>
-          <a href="{{vol.url}}?tab=Stories"  id="Stories" class="nav-link {% if page.section == 'story' %}active{% endif %}">Stories</a>
-          <a href="{{vol.url}}?tab=Films" id="Films" class="nav-link {% if page.section == 'film' %}active{% endif %}">Films</a>
+          <button onclick="showTab(event)" id="Info" class="nav-link">Info</button>
+          <button onclick="showTab(event)" id="Films" class="nav-link">Films</button>
         {% endif %}
       {% endfor %}
     </div>
@@ -28,11 +27,58 @@
   {% if page.section == 'story' or page.section == 'film' %}
     <div class="nav l-3">
 
+  <a href="{% for vol in site.volume %}{% if page.volume == vol.title %}{{vol.url}}{% endif %}{% endfor %}">← BACK</a>
+
       <a href="{{page.url}}" class="nav-link">{{page.title}}</a>
-{% if page.section == 'film' %}
-      <a href="{{vol.url}}?tab=Filminfo"  id="Filminfo"  class="nav-link">Info</a>
-{% endif %}
+
+      <div class="scrolltextcontainer">
+        <div class="scrolltext">
+        {{page.text}}
+        </div>
+      </div>
     </div>
+
+    <style>
+    .scrolltextcontainer {
+    width: 100%;overflow: hidden;}
+    .scrolltext {
+    -moz-animation: marquee 30s linear infinite;
+    -webkit-animation: marquee 30s linear infinite;
+    animation: marquee 30s linear infinite;
+  }
+
+  .scrolltextcontainer:hover .scrolltext {
+    animation-play-state: paused;
+  }
+  @-moz-keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @-webkit-keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%)
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+    </style>
  
   {% endif %}
 

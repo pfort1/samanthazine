@@ -1,5 +1,5 @@
 ---
-layout: film-item-layout
+layout: film/film-item
 section: film
 title: Sexology
 film-url: https://drive.google.com/uc?export=download&id=1EcKblpB2YqXERNDu_bnsAxxCBTcLovJe

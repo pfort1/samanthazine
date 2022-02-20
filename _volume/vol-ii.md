@@ -11,4 +11,5 @@ pdf-price: "-33"
 pagecount: "150"
 width: "25"
 height: "28"
+permalink: /
 ---

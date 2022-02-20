@@ -10,17 +10,20 @@ layout: compress
 {% if site.indev == true %}
  {% include index.html %}
 {% else %}
- <body class="body">
+ <body class="body {{page.title|slugify}}">
 
+ {% if page.section != 404 %}
    {% include age-gate.html %}
-   <div class="intro-logo"></div>
-
+   <div onclick="hideIntro()" class="intro-logo"></div>
    {% include navigator.html %}
+  {% endif %}
 
    {{ content }}
 
+   {% if page.section != 404 %}
+    {% include footer.html %}
+   {% endif %}
    
-   {% include footer.html %}
  </body>
 {% endif %}
 

@@ -4,13 +4,13 @@ layout: default
 <div class="main l-2">
 
   <!-- INRO -->
-  <div class="tabpane" id="Info" style="display: block">
+  <div class="tabpane" style="display: block">
     <p class="paragraph">{{page.text}}</p>
-<p class="paragraph productinfo smaller">{{page.height}}x{{page.width}}cm / {{page.pagecount}}pages {% if page.price %}/ ${{page.price}}{% endif %}</p>
+    <p class="paragraph productinfo smaller">{{page.height}}x{{page.width}}in / {{page.pagecount}}pages {% if page.price %}/ ${{page.price}}{% endif %}</p>
 
     {% if page.price %}
       <br>
-    <a href="story.html" class="buy-button snipcart-add-item"  data-item-price="{{page.price}}" data-item-name="{{page.title}} -  Samanthazine" data-item-id="{{page.title}}-zine" data-item-url="{{page.url}}" data-item-max-quantity="1"
+    <a href="story.html" class="story-link fixed snipcart-add-item"  data-item-price="{{page.price}}" data-item-name="{{page.title}} -  Samanthazine" data-item-id="{{page.title}}-zine" data-item-url="{{page.url}}" data-item-max-quantity="1"
     data-item-shippable="true"  data-item-custom1-name="test" data-item-custom1-options="Book + PDF|PDF only[{{page.pdf-price}}]" data-item-custom1-value="Book + PDF">Buy the book</a>
     {% endif %}
   </div>
@@ -25,7 +25,7 @@ layout: default
   {% assign storiesArt = volStories | where:'category','Art' %}
   {% assign storiesEditorial = volStories | where: 'category' ,'Fashion' %}
 
-  <div class="tabpane" id="Stories">
+  <div class="tabpane" id="Info">
     {% if voltwo %}
     <div class="storytagbar">Artist</div>
     {% endif %}
@@ -34,7 +34,9 @@ layout: default
                 <div class="item-lightbox">
                     <img src="{{ story.images[0] }}" alt="">
                 </div>
-                <a href="{{ story.url }}" class="story-link">{{ story.title }}</a>
+                <div class="story-link">{{ story.title }}
+                <div>{{story.credits|markdownify}}</div>
+                </div>
             </div>
     {% endfor %}
     {% if voltwo %}
@@ -45,7 +47,8 @@ layout: default
                 <div class="item-lightbox">
                     <img src="{{ story.images[0] }}" alt="">
                 </div>
-                <a href="{{ story.url }}" class="story-link">{{ story.title }}</a>
+                <div class="story-link">{{ story.title }}
+                </div>
             </div>
     {% endfor %}
 
@@ -57,22 +60,14 @@ layout: default
     {% if voltwo %}
     {% endif %}
     {% for film in site.film %}
-    <!-- <a href="{{film.url}}" class="film-item w-inline-block">
-      <div class="film-img">
-        <img src="{{ film.image }}" sizes="100vw" alt=""></div>
-      <div class="film-info">
-        <div class="serif-text small-title">{{ film.title }}</div>
-        <div class="sans-serif right">{{ film.volume }}</div>
+      {% if film.volume == volumeTitle %}
+      <div class="item">
+        <div class="item-lightbox">
+          <img src="{{ film.image }}" sizes="100vw" alt="">
+        </div>
+        <a href="{{film.url}}" class="story-link">{{film.title}}</a>
       </div>
-    </a> -->
-    {% if film.volume == volumeTitle %}
-    <div class="item">
-      <div class="item-lightbox">
-        <img src="{{ film.image }}" sizes="100vw" alt="">
-      </div>
-      <a href="{{film.url}}" class="story-link">{{film.title}}</a>
-    </div>
-    {% endif %}
+      {% endif %}
     {% endfor %}
   </div>
 
