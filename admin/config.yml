@@ -7,7 +7,7 @@ backend:
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
 
-local_backend: false
+local_backend: true
 
 display_url: https://dev.samanthazine.com
 
@@ -17,6 +17,15 @@ editor:
     preview: false
 
 collections:
+  - name: shop
+    label: Products
+    folder: _shop
+    create: true
+    fields:
+      - { label: text, name: text, widget: string }
+      - { label: info, name: info, widget: string }
+      - { label: id, name: product_id, widget: string }
+      - {label: Image, name: image, widget: image }
   - name: pages
     label: Pages
     delete: false
@@ -60,8 +69,9 @@ collections:
           config:
             multiple: true
       - {label: text, name: text, required: false, widget: string}
-      - {label: price, name: price, required: false, widget: string}
-      - {label: pdf price difference, name: pdf-price, required: false, widget: string}
+      - { label: product id, name: product_id, required: false, widget: string }
+      # - {label: price, name: price, required: false, widget: string}
+      # - {label: pdf price difference, name: pdf-price, required: false, widget: string}
       - {label: Width (cm), name: width, required: false, widget: string}
       - {label: Height (cm), name: height, required: false, widget: string}
       - {label: page count, name: pagecount, required: false, widget: string}

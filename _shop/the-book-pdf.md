@@ -1,8 +1,5 @@
 ---
-layout: shop/shop-item
-title: THE BOOK + PDF
-description: "PURCHASE THE BOOK COMES PDF "
-price: 45
-max-quantity: 1
-ship: false
+text: T-shirt
+info: this is a t-shirt
+image: /assets/img/uploads/s_0965_edit.jpg
 ---

@@ -108,9 +108,56 @@ blockquote {
 }
 
 [data-current="film"] .nav.l-2,
+[data-current="shop"] .nav.l-2,
 [data-current="film"] .nav.l-3 {
   width: 100%;
 }
+
+[data-current="shop"] .content {
+padding-top: 104px;
+}
+[data-current="shop"] .item-collection {
+/* display: grid;
+grid-template-columns: repeat(2, auto); */
+}
+
+[data-current="shop"] .item-collection > div {
+/* max-height: 470px;
+display: block;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column; */
+}
+
+[data-current="shop"] .item img {
+/* height: 100%; */
+}
+
+[data-current="shop"] .item-collection > div {
+display: grid;
+grid-template-columns: 1fr 1fr;
+border-bottom: 1px solid black;
+}
+
+[data-current="shop"] .item-collection img {
+  max-height: 400px;
+  object-fit: contain;
+  background: black;
+}
+
+[data-current="shop"] .item-collection > div > div:last-of-type {
+  background: black;
+  display: flex;
+flex-direction: column;
+align-items: left;
+justify-content: center;
+}
+[data-current="shop"] .item-collection > div > div:first-of-type {
+padding-top: 5px;
+}
+
 .nav.l-2.story {
   /* -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -206,6 +253,13 @@ button.nav-link {
   line-height: 5.5vw;
   text-align: left;
   letter-spacing: -0.6vw;
+}
+
+.story-link.buy-button {
+  display: block !important;
+  position: fixed !important;
+  bottom: 35px;
+  width: 100%;
 }
 
 .story-link:hover {

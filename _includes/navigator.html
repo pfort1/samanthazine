@@ -4,13 +4,14 @@
 
   </div>
 
-  {% if page.section == 'volume' or page.section == 'story' or page.section == 'film' %}
+  {% if page.section == 'volume' or page.section == 'story' or page.section == 'film' or page.section == 'shop' %}
   <div class="nav l-2">
 
     <div style="display: flex;">
       {% for vol in site.volume %}
       <a href="{{vol.url}}" class="nav-link {% if page.url == vol.url or page.volume == vol.title %}active{% endif %}">{{vol.title}}</a>
       {% endfor %}
+      <a class="nav-link {% if page.url == '/shop' %}active{% endif %}" href="/shop">SHOP</a>
     </div>
 
     <div class="navlinkcontainer">
