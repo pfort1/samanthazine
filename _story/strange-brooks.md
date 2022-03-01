@@ -1,7 +1,7 @@
 ---
 layout: story
-title: Strange Brooks
 section: story
+title: Sexology
 category: Fashion
 credits: |-
   Model: [Cheeky](https://www.instagram.com/cheekymaa/)
@@ -17,8 +17,6 @@ credits: |-
   Hair [Takuya Yamaguchi](https://www.instagram.com/tak8133/)
 
   SPECIAL THANKS TO [Possessed](https://www.instagram.com/_possessed_/)
-
-images:
-  - /assets/img/uploads/s_0965_edit.jpg
+images: []
 volume: Vol. I
 ---
