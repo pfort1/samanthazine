@@ -3,18 +3,13 @@ layout: story
 section: story
 title: Cheeky is Succubus
 category: Fashion
-text: |-
-  Model: [Cheeky](https://www.instagram.com/cheekymaa/)
-
-  Photo: [Danny Lim](https://www.instagram.com/dannny.lim/)
-
-  Video: [Ameer Kazmi](https://www.instagram.com/arizonasandhoneybuns/)
-
-  Style: [Samantha-Sungeun Kim](https://www.instagram.com/stylesamantha7/)
-
-  Make-Up: [Ayaka Nihel](https://www.instagram.com/ayaka_nihei/)
-
-  Hair[: Takuya Yamaguchi](https://www.instagram.com/tak8133/)
+text: MEER KAZMI, AYAKA NIHEI, BRIAN RUDOLPH, BROOKS,CASEY MCCOY, CHEEKY,CULLEN
+  ROBBINS, DANA DI COURCI, DANNY LIM, DAVID ORAMAS, ELKI, GARAM HONG, GERASIMOU
+  PINELOPI, HYEONWOO, JESSICA, JONO, JUSTIN PIETROPOLI, KATIE COX, KAZU
+  KARAHIRA, KOHKO TAKAKO, KOTARO KAWASHIMA, KRICKIE, MATT PECINA, MICHI, NAS,
+  ODAL, OH E, PHILIP ERRICO, SAMANTHA-SUNGEUN KIM, SIERRA VILLARREAL, SIYOUNG
+  SONG, SOO A, TAKUYA YAMAGUCHI, TAMING CHEN, YUI ISHIBASHI,YUKA HIRAC,YUKIE
+  NAMMORI
 images:
   - /assets/img/uploads/6 2.jpg
   - /assets/img/uploads/12 2.jpg
