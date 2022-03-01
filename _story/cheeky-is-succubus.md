@@ -16,8 +16,7 @@ text: |-
 
   Hair[: Takuya Yamaguchi](https://www.instagram.com/tak8133/)
 images:
-  - /assets/img/uploads/photo1.jpg
-  - /assets/img/uploads/photo2.jpg
-  - /assets/img/uploads/ samanthazine7.jpg
+  - /assets/img/uploads/6 2.jpg
+  - /assets/img/uploads/12 2.jpg
 volume: Vol. I
 ---
