@@ -5,7 +5,11 @@ title: Vol. II
 image: /assets/img/uploads/vol-2-cover.jpg
 image-back: /assets/img/uploads/vol-2-back.jpg
 image-spine: /assets/img/uploads/vol-2-spine.jpg
-text: You’ll just have to see for yourself.
+text: "Samantha is a New Age Erotica zine that explores ideas of sexuality and
+  eroticism through photography and other forms of visual art. We are driven to
+  revive the romance of erotica in our world orverrun by commercialized desire.
+  Vol.2 provides a platform to elevate each artist’s visions of what erotica can
+  be. "
 product_id: 49PWNL
 width: "8.5"
 height: "11"
