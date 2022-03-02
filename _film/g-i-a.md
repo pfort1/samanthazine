@@ -6,5 +6,6 @@ film-url: https://www.googleapis.com/drive/v3/files/1nqSx4ZMsOFNzTfTn1XA9GxQVODG
 text: "FILM DIRECTED by Nora Smith FEATURING Gia  / STYLE : Samantha Kim /
   PRODUCTION : Philip Errico / MAKE-UP : Mitch Yoshida / HAIR : Tomoaki Sato /
   MUSIC :  Aaron Méan / ASSIST  : Motoria"
+image: /assets/img/uploads/vol2-g.i.a.screen.png
 volume: Vol. II
 ---
