@@ -2,7 +2,7 @@
 layout: film/film-item
 section: film
 title: G.I.A.
-film-url: https://drive.google.com/drive/folders/1phm_FEEk3dh1XwzDkWKsJUF70vL0KJ0-
+film-url: https://drive.google.com/uc?export=download&id=17-rff4IZ9mX95BssULS5ZlEag7TN-Q7z
 text: "FILM DIRECTED by Nora Smith FEATURING Gia  / STYLE : Samantha Kim /
   PRODUCTION : Philip Errico / MAKE-UP : Mitch Yoshida / HAIR : Tomoaki Sato /
   MUSIC :  Aaron Méan / ASSIST  : Motoria"
